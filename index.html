@@ -1,0 +1,2820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English Language & Communication — Level 4 | Exam Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0d0f14;
+    --surface: #141720;
+    --card: #1a1e2e;
+    --border: #2a2f45;
+    --accent: #f0a500;
+    --accent2: #3ecfcf;
+    --accent3: #e05c5c;
+    --text: #e8eaf0;
+    --muted: #8892a4;
+    --highlight: rgba(240,165,0,0.12);
+    --unit1: #f0a500;
+    --unit2: #3ecfcf;
+    --unit3: #a78bfa;
+    --unit4: #34d399;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  /* HEADER */
+  .hero {
+    background: linear-gradient(135deg, #0d0f14 0%, #141b2d 50%, #0d1420 100%);
+    border-bottom: 2px solid var(--accent);
+    padding: 50px 40px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; left: 50%; transform: translateX(-50%);
+    width: 600px; height: 300px;
+    background: radial-gradient(ellipse, rgba(240,165,0,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero .badge {
+    display: inline-block;
+    background: rgba(240,165,0,0.15);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    padding: 4px 14px;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 5vw, 52px);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+  .hero h1 span { color: var(--accent); }
+  .hero .sub {
+    color: var(--muted);
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 28px;
+  }
+  .meta-row {
+    display: flex; gap: 24px; justify-content: center; flex-wrap: wrap;
+  }
+  .meta-pill {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--accent2);
+  }
+
+  /* NAV */
+  .toc {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 20px 40px;
+    display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;
+  }
+  .toc a {
+    color: var(--muted);
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    padding: 6px 14px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    transition: all 0.2s;
+  }
+  .toc a:hover { color: var(--accent); border-color: var(--accent); }
+
+  /* LAYOUT */
+  .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+  /* SECTION HEADERS */
+  .section-header {
+    padding: 50px 0 0;
+    margin-bottom: 30px;
+  }
+  .section-header .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+  }
+  .section-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  .u1 .label, .u1 h2 span { color: var(--unit1); }
+  .u2 .label, .u2 h2 span { color: var(--unit2); }
+  .u3 .label, .u3 h2 span { color: var(--unit3); }
+  .u4 .label, .u4 h2 span { color: var(--unit4); }
+  .sec .label { color: var(--accent3); }
+  .sec h2 span { color: var(--accent3); }
+
+  /* CARDS */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-bottom: 20px;
+  }
+  .card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    margin-bottom: 16px;
+    color: #fff;
+  }
+  .card h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent);
+    margin: 18px 0 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* ACCENT CARD */
+  .card.accent-u1 { border-left: 4px solid var(--unit1); }
+  .card.accent-u2 { border-left: 4px solid var(--unit2); }
+  .card.accent-u3 { border-left: 4px solid var(--unit3); }
+  .card.accent-u4 { border-left: 4px solid var(--unit4); }
+
+  /* DEF BOX */
+  .def-box {
+    background: rgba(240,165,0,0.06);
+    border-left: 3px solid var(--accent);
+    padding: 14px 18px;
+    border-radius: 0 8px 8px 0;
+    margin: 14px 0;
+    font-style: italic;
+  }
+  .def-box.c2 { background: rgba(62,207,207,0.06); border-color: var(--unit2); }
+  .def-box.c3 { background: rgba(167,139,250,0.06); border-color: var(--unit3); }
+  .def-box.c4 { background: rgba(52,211,153,0.06); border-color: var(--unit4); }
+
+  /* EXAMPLE */
+  .ex {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 8px 0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--accent2);
+  }
+  .ex .label-ex {
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  /* TABLE */
+  .tbl-wrap { overflow-x: auto; margin: 16px 0; border-radius: 10px; border: 1px solid var(--border); }
+  table { width: 100%; border-collapse: collapse; }
+  thead tr { background: rgba(240,165,0,0.1); }
+  thead th {
+    padding: 12px 16px;
+    text-align: left;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: var(--accent);
+    border-bottom: 1px solid var(--border);
+  }
+  tbody tr { border-bottom: 1px solid var(--border); }
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:hover { background: rgba(255,255,255,0.02); }
+  td { padding: 10px 16px; font-size: 14px; vertical-align: top; }
+  td:first-child { font-family: 'JetBrains Mono', monospace; color: var(--accent2); font-size: 13px; }
+
+  /* LIST */
+  ul.list, ol.list {
+    padding-left: 22px;
+    margin: 10px 0;
+  }
+  ul.list li, ol.list li {
+    margin-bottom: 6px;
+    font-size: 14px;
+  }
+
+  /* HIGHLIGHT */
+  .hl { color: var(--accent); font-weight: 600; }
+  .hl2 { color: var(--accent2); }
+  .hl3 { color: var(--unit3); }
+  .hl4 { color: var(--unit4); }
+
+  /* MNEMONIC */
+  .mnemonic {
+    background: rgba(167,139,250,0.08);
+    border: 1px dashed var(--unit3);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 12px 0;
+    font-size: 14px;
+  }
+  .mnemonic .tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--unit3);
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+    display: block;
+  }
+
+  /* RULE BOX */
+  .rule-box {
+    background: rgba(224,92,92,0.07);
+    border: 1px solid rgba(224,92,92,0.3);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 12px 0;
+    font-size: 14px;
+  }
+  .rule-box .rtag {
+    color: var(--accent3);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+    display: block;
+  }
+
+  /* ANSWER BOX */
+  .answer-box {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--accent3);
+    border-radius: 0 0 12px 12px;
+    padding: 24px 28px;
+    margin-bottom: 24px;
+  }
+  .q-header {
+    background: rgba(224,92,92,0.1);
+    border: 1px solid rgba(224,92,92,0.25);
+    border-radius: 12px 12px 0 0;
+    padding: 14px 28px;
+    display: flex; gap: 16px; align-items: center;
+    margin-bottom: 0;
+  }
+  .q-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--accent3);
+    background: rgba(224,92,92,0.15);
+    padding: 3px 10px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+  }
+  .q-text { font-weight: 600; font-size: 14px; }
+
+  /* REVISION */
+  .revision-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin: 16px 0;
+  }
+  .rev-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px;
+  }
+  .rev-card h5 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+
+  /* TIP */
+  .tip {
+    background: rgba(52,211,153,0.07);
+    border: 1px solid rgba(52,211,153,0.25);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 8px 0;
+    font-size: 14px;
+  }
+  .tip::before { content: '💡 '; }
+
+  /* DIVIDER */
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 40px 0;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 24px;
+    color: var(--muted);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    margin-top: 60px;
+  }
+
+  @media (max-width: 600px) {
+    .hero { padding: 36px 20px 28px; }
+    .container { padding: 0 16px; }
+    .card { padding: 20px 18px; }
+    .toc { padding: 16px 20px; }
+  }
+
+
+  /* ===== PREMIUM BLACK THEME + PROFESSIONAL STICKY HEADER / HAMBURGER MENU ===== */
+  html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+  :root {
+    --bg: #030405;
+    --surface: #080a0f;
+    --card: #0d1017;
+    --border: rgba(255,255,255,0.12);
+    --accent: #00e7ff;
+    --accent2: #b7f7ff;
+    --accent3: #ff4f6d;
+    --text: #f4f7fb;
+    --muted: #9aa6b8;
+    --highlight: rgba(0,231,255,0.10);
+    --unit1: #00e7ff;
+    --unit2: #8cf7ff;
+    --unit3: #b58cff;
+    --unit4: #32f5a9;
+  }
+  body {
+    background:
+      radial-gradient(circle at 18% 0%, rgba(0,231,255,0.11), transparent 30%),
+      radial-gradient(circle at 84% 8%, rgba(181,140,255,0.09), transparent 28%),
+      linear-gradient(180deg, #05070a 0%, #020304 52%, #07090d 100%);
+    color: var(--text);
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background:
+      linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
+    background-size: 58px 58px;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0.55), transparent 75%);
+    z-index: -1;
+  }
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(3,4,5,0.78);
+    backdrop-filter: blur(22px) saturate(155%);
+    -webkit-backdrop-filter: blur(22px) saturate(155%);
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 18px 45px rgba(0,0,0,0.38);
+  }
+  .site-header-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    min-height: 72px;
+    padding: 0 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+  }
+  .brand-lockup {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 235px;
+  }
+  .brand-mark {
+    width: 38px;
+    height: 38px;
+    border: 1px solid rgba(0,231,255,0.45);
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    color: #001014;
+    background: linear-gradient(135deg, #ffffff 0%, #00e7ff 52%, #7df7ff 100%);
+    box-shadow: 0 0 28px rgba(0,231,255,0.28);
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 800;
+    letter-spacing: -1px;
+  }
+  .brand-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 1.3;
+  }
+  .brand-title span {
+    display: block;
+    color: var(--accent);
+    font-size: 10px;
+    letter-spacing: 2.6px;
+    margin-top: 2px;
+  }
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex: 1;
+  }
+  .desktop-nav a {
+    color: #c7d0df;
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    padding: 10px 12px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    transition: all 0.22s ease;
+    white-space: nowrap;
+  }
+  .desktop-nav a:hover {
+    color: #fff;
+    border-color: rgba(0,231,255,0.35);
+    background: rgba(0,231,255,0.08);
+    box-shadow: 0 0 22px rgba(0,231,255,0.13);
+  }
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .ashish-chip {
+    border: 1px solid rgba(0,231,255,0.28);
+    background: rgba(255,255,255,0.04);
+    color: var(--accent2);
+    border-radius: 999px;
+    padding: 9px 13px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .menu-toggle {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.16);
+    background: rgba(255,255,255,0.05);
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    gap: 0;
+    transition: all 0.2s ease;
+  }
+  .menu-toggle:hover {
+    border-color: rgba(0,231,255,0.42);
+    background: rgba(0,231,255,0.08);
+    box-shadow: 0 0 24px rgba(0,231,255,0.16);
+  }
+  .menu-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+    position: relative;
+    transition: 0.22s ease;
+  }
+  .menu-toggle span::before,
+  .menu-toggle span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+    transition: 0.22s ease;
+  }
+  .menu-toggle span::before { top: -7px; }
+  .menu-toggle span::after { top: 7px; }
+  body.menu-open .menu-toggle span { background: transparent; }
+  body.menu-open .menu-toggle span::before { top: 0; transform: rotate(45deg); }
+  body.menu-open .menu-toggle span::after { top: 0; transform: rotate(-45deg); }
+  .menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(3px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+    z-index: 1090;
+  }
+  .side-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: min(430px, 92vw);
+    height: 100vh;
+    background:
+      radial-gradient(circle at 0% 0%, rgba(0,231,255,0.13), transparent 36%),
+      linear-gradient(180deg, rgba(12,16,24,0.98) 0%, rgba(3,4,5,0.99) 100%);
+    border-left: 1px solid rgba(255,255,255,0.13);
+    box-shadow: -28px 0 75px rgba(0,0,0,0.64);
+    transform: translateX(102%);
+    transition: transform 0.32s cubic-bezier(.22,.61,.36,1);
+    z-index: 1100;
+    padding: 30px;
+    overflow-y: auto;
+  }
+  body.menu-open .menu-overlay { opacity: 1; pointer-events: auto; }
+  body.menu-open .side-menu { transform: translateX(0); }
+  .side-menu-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 14px;
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+  .side-menu-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    line-height: 1.05;
+    color: #fff;
+  }
+  .side-menu-title span {
+    display: block;
+    color: var(--accent);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 10px;
+  }
+  .close-menu {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.14);
+    background: rgba(255,255,255,0.04);
+    color: #fff;
+    cursor: pointer;
+    font-size: 22px;
+    line-height: 1;
+  }
+  .menu-links {
+    display: grid;
+    gap: 12px;
+  }
+  .menu-links a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    color: #e7edf6;
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 15px 16px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.10);
+    background: rgba(255,255,255,0.035);
+    transition: all 0.22s ease;
+  }
+  .menu-links a::after {
+    content: '↗';
+    color: var(--accent);
+    opacity: 0.72;
+  }
+  .menu-links a:hover {
+    transform: translateX(-4px);
+    border-color: rgba(0,231,255,0.36);
+    background: rgba(0,231,255,0.08);
+    box-shadow: 0 14px 35px rgba(0,0,0,0.28), 0 0 22px rgba(0,231,255,0.12);
+  }
+  .menu-note {
+    margin-top: 24px;
+    color: var(--muted);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+  }
+  .hero {
+    background:
+      radial-gradient(ellipse at center top, rgba(0,231,255,0.16) 0%, transparent 55%),
+      linear-gradient(135deg, #030405 0%, #080d16 48%, #020304 100%);
+    border-bottom: 1px solid rgba(0,231,255,0.45);
+    box-shadow: inset 0 -1px 0 rgba(255,255,255,0.06), 0 30px 90px rgba(0,0,0,0.45);
+  }
+  .hero::before {
+    background: radial-gradient(ellipse, rgba(0,231,255,0.12) 0%, transparent 70%);
+  }
+  .hero .badge, .meta-pill, .toc a, .card, .rev-card, .answer-box, .q-header, .tbl-wrap, .ex, .rule-box, .def-box, .mnemonic, .tip {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  .hero .badge {
+    background: rgba(0,231,255,0.09);
+    border-color: rgba(0,231,255,0.38);
+    color: var(--accent);
+    box-shadow: 0 0 22px rgba(0,231,255,0.10);
+  }
+  .hero h1 span { color: var(--accent); text-shadow: 0 0 26px rgba(0,231,255,0.18); }
+  .meta-pill {
+    background: rgba(255,255,255,0.035);
+    border-color: rgba(255,255,255,0.11);
+    color: var(--accent);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+  }
+  .toc {
+    background: rgba(8,10,15,0.86);
+    border-top: 1px solid rgba(255,255,255,0.07);
+    border-bottom: 1px solid rgba(255,255,255,0.11);
+  }
+  .toc a {
+    background: rgba(255,255,255,0.035);
+    color: #b8c4d6;
+    border-color: rgba(255,255,255,0.11);
+    border-radius: 8px;
+    padding: 9px 17px;
+  }
+  .toc a:hover {
+    color: #fff;
+    border-color: rgba(0,231,255,0.42);
+    background: rgba(0,231,255,0.08);
+    box-shadow: 0 0 22px rgba(0,231,255,0.13);
+  }
+  .card, .answer-box {
+    background: linear-gradient(180deg, rgba(16,20,29,0.92), rgba(9,11,17,0.94));
+    border-color: rgba(255,255,255,0.11);
+    box-shadow: 0 18px 48px rgba(0,0,0,0.32), inset 0 1px 0 rgba(255,255,255,0.04);
+  }
+  .card:hover { border-color: rgba(255,255,255,0.16); }
+  .ex, .rev-card {
+    background: rgba(255,255,255,0.035);
+    border-color: rgba(255,255,255,0.10);
+  }
+  .tbl-wrap { border-color: rgba(255,255,255,0.12); box-shadow: 0 12px 35px rgba(0,0,0,0.20); }
+  thead tr { background: rgba(0,231,255,0.08); }
+  thead th { color: var(--accent); border-bottom-color: rgba(255,255,255,0.12); }
+  tbody tr { border-bottom-color: rgba(255,255,255,0.08); }
+  tbody tr:hover { background: rgba(0,231,255,0.04); }
+  footer {
+    background: rgba(3,4,5,0.92);
+    border-top-color: rgba(255,255,255,0.12);
+  }
+  @media (max-width: 1050px) {
+    .desktop-nav { display: none; }
+    .brand-lockup { min-width: auto; }
+  }
+  @media (max-width: 600px) {
+    .site-header-inner { padding: 0 16px; min-height: 64px; }
+    .brand-title { font-size: 10px; letter-spacing: 1.2px; }
+    .brand-title span { font-size: 9px; }
+    .brand-mark { width: 34px; height: 34px; }
+    .ashish-chip { display: none; }
+    .side-menu { padding: 24px 20px; }
+    .side-menu-title { font-size: 24px; }
+  }
+
+
+
+/* ===== FINAL SPACEX-LEVEL SHINING BLACK THEME OVERRIDE ===== */
+:root {
+  --bg: #000000;
+  --surface: #050505;
+  --card: #090909;
+  --border: rgba(255,255,255,0.14);
+  --accent: #ffffff;
+  --accent2: #cfd5df;
+  --accent3: #8f98a8;
+  --text: #f5f7fb;
+  --muted: #a4a9b2;
+  --highlight: rgba(255,255,255,0.08);
+  --unit1: #ffffff;
+  --unit2: #d7dde8;
+  --unit3: #bfc7d5;
+  --unit4: #e6eaf2;
+}
+html { scroll-behavior: smooth; scroll-padding-top: 86px; }
+* { -webkit-tap-highlight-color: transparent; }
+body {
+  background:
+    radial-gradient(circle at 72% 4%, rgba(255,255,255,0.08), transparent 22%),
+    radial-gradient(circle at 12% 20%, rgba(255,255,255,0.045), transparent 20%),
+    linear-gradient(180deg, #000 0%, #050505 38%, #000 100%) !important;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif !important;
+  letter-spacing: 0.01em;
+}
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -2;
+  background:
+    radial-gradient(1px 1px at 12% 18%, rgba(255,255,255,0.50), transparent),
+    radial-gradient(1px 1px at 28% 62%, rgba(255,255,255,0.36), transparent),
+    radial-gradient(1px 1px at 48% 26%, rgba(255,255,255,0.32), transparent),
+    radial-gradient(1px 1px at 78% 78%, rgba(255,255,255,0.44), transparent),
+    radial-gradient(1px 1px at 92% 36%, rgba(255,255,255,0.30), transparent);
+  background-size: 520px 520px;
+  opacity: 0.42;
+}
+body::after {
+  content: '';
+  position: fixed;
+  inset: auto 0 0 0;
+  height: 45vh;
+  background: linear-gradient(to top, rgba(255,255,255,0.035), transparent);
+  pointer-events: none;
+  z-index: -1;
+}
+::selection { background: #fff; color: #000; }
+
+/* SpaceX-style header */
+.site-header {
+  position: fixed !important;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: linear-gradient(180deg, rgba(0,0,0,0.92), rgba(0,0,0,0.55) 72%, rgba(0,0,0,0)) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.06) !important;
+  box-shadow: none !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.site-header-inner {
+  max-width: 1800px !important;
+  min-height: 66px !important;
+  padding: 0 3.2vw !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+.brand-lockup { min-width: 255px !important; display: flex; flex-direction: column; gap: 1px; }
+.brand-wordmark {
+  color: #fff;
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 1;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  text-shadow: 0 0 18px rgba(255,255,255,0.16);
+}
+.brand-subline {
+  color: rgba(255,255,255,0.72);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2.1px;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+.desktop-nav { display: flex; align-items: center; justify-content: center; gap: 26px; flex: 1; }
+.desktop-nav a {
+  position: relative;
+  color: rgba(255,255,255,0.92) !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 800;
+  letter-spacing: 1.1px !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 20px 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+}
+.desktop-nav a::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: 15px;
+  width: 100%; height: 2px;
+  background: #fff;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .28s ease;
+}
+.desktop-nav a:hover { color: #fff !important; box-shadow: none !important; }
+.desktop-nav a:hover::after { transform: scaleX(1); transform-origin: left; }
+.header-actions { display: flex; align-items: center; gap: 18px; }
+.ashish-chip {
+  color: rgba(255,255,255,0.86) !important;
+  background: transparent !important;
+  border: 1px solid rgba(255,255,255,0.18) !important;
+  border-radius: 0 !important;
+  padding: 10px 16px !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 800;
+  letter-spacing: 1.6px !important;
+  text-transform: uppercase;
+  box-shadow: inset 0 0 0 0 #fff;
+  transition: all .25s ease;
+}
+.ashish-chip:hover { color:#000 !important; box-shadow: inset 220px 0 0 0 #fff; }
+.menu-toggle {
+  width: 42px !important; height: 42px !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  display: grid !important;
+  place-items: center;
+  cursor: pointer;
+}
+.menu-toggle span, .menu-toggle span::before, .menu-toggle span::after {
+  background: #fff !important;
+  height: 2px !important;
+  width: 23px !important;
+  border-radius: 0 !important;
+}
+.menu-toggle:hover { transform: scale(1.04); box-shadow: none !important; }
+.menu-toggle:hover span::before { transform: translateX(5px); }
+.menu-toggle:hover span::after { transform: translateX(-5px); }
+body.menu-open .menu-toggle span { background: transparent !important; }
+body.menu-open .menu-toggle span::before { transform: rotate(45deg) !important; top: 0 !important; }
+body.menu-open .menu-toggle span::after { transform: rotate(-45deg) !important; top: 0 !important; }
+
+/* Premium slide menu */
+.menu-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.70) !important;
+  backdrop-filter: blur(8px);
+  opacity: 0; pointer-events: none;
+  transition: opacity .3s ease;
+  z-index: 1090;
+}
+.side-menu {
+  position: fixed !important;
+  top: 0; right: 0;
+  width: min(455px, 94vw) !important;
+  height: 100vh;
+  background:
+    linear-gradient(180deg, rgba(18,18,18,0.96), rgba(0,0,0,0.98)),
+    radial-gradient(circle at 100% 0%, rgba(255,255,255,0.10), transparent 38%) !important;
+  border-left: 1px solid rgba(255,255,255,0.18) !important;
+  box-shadow: -45px 0 110px rgba(0,0,0,0.85) !important;
+  transform: translateX(104%);
+  transition: transform .38s cubic-bezier(.22,.61,.36,1);
+  z-index: 1100;
+  padding: 34px 34px 28px !important;
+  overflow-y: auto;
+}
+body.menu-open .menu-overlay { opacity: 1; pointer-events: auto; }
+body.menu-open .side-menu { transform: translateX(0); }
+.side-menu-top { border-bottom: 1px solid rgba(255,255,255,0.16) !important; padding-bottom: 22px; margin-bottom: 22px; }
+.side-menu-title {
+  color: #fff !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 30px !important;
+  font-weight: 900;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+.side-menu-title span {
+  display: block;
+  margin-top: 8px;
+  color: rgba(255,255,255,0.58) !important;
+  font-size: 10px !important;
+  font-weight: 800;
+  letter-spacing: 2.2px;
+}
+.close-menu { background: transparent !important; border: 0 !important; color: #fff !important; font-size: 34px !important; cursor: pointer; }
+.menu-links { display: grid; gap: 0 !important; }
+.menu-links a {
+  display: flex; justify-content: space-between; align-items: center;
+  color: rgba(255,255,255,0.92) !important;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 800;
+  letter-spacing: 1.05px !important;
+  text-transform: uppercase;
+  padding: 18px 0 !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(255,255,255,0.13) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  transition: color .22s ease, padding-left .22s ease, letter-spacing .22s ease;
+}
+.menu-links a::after { content: '→' !important; color: #fff !important; opacity: .7; transition: transform .22s ease; }
+.menu-links a:hover { color: #fff !important; padding-left: 14px !important; letter-spacing: 1.35px !important; box-shadow: none !important; transform: none !important; }
+.menu-links a:hover::after { transform: translateX(8px); }
+.menu-note { color: rgba(255,255,255,0.48) !important; font-size: 10px !important; letter-spacing: 1.5px !important; }
+
+/* Remove old screenshot-like navigation/meta block */
+.toc { display: none !important; }
+.hero .meta-row { display: none !important; }
+
+/* Cinematic hero */
+.hero {
+  min-height: 82vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left !important;
+  padding: 140px 7vw 82px !important;
+  border-bottom: 1px solid rgba(255,255,255,0.12) !important;
+  background:
+    radial-gradient(circle at 72% 50%, rgba(148,86,42,0.42) 0%, rgba(93,52,28,0.20) 14%, transparent 33%),
+    radial-gradient(circle at 82% 48%, rgba(255,255,255,0.10), transparent 20%),
+    linear-gradient(90deg, #000 0%, #000 37%, rgba(8,8,8,0.95) 58%, #000 100%) !important;
+  box-shadow: inset 0 -120px 150px rgba(0,0,0,0.88) !important;
+  overflow: hidden;
+}
+.hero::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  width: auto !important; height: auto !important;
+  left: 0 !important; top: 0 !important;
+  transform: none !important;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,0.18), rgba(0,0,0,0.06)),
+    radial-gradient(1px 1px at 10% 26%, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1px 1px at 35% 64%, rgba(255,255,255,0.35), transparent),
+    radial-gradient(1px 1px at 91% 18%, rgba(255,255,255,0.36), transparent);
+  background-size: auto, 420px 420px, 560px 560px, 520px 520px;
+  opacity: .55;
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  right: 12vw;
+  top: 22%;
+  width: min(34vw, 520px);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background:
+    linear-gradient(90deg, rgba(141,76,35,0.95) 0%, rgba(121,67,33,0.75) 42%, rgba(0,0,0,0.96) 70%),
+    radial-gradient(circle at 36% 42%, rgba(255,170,92,0.45), transparent 9%);
+  box-shadow: 0 0 55px rgba(186,101,50,0.28), inset -95px 0 105px rgba(0,0,0,0.86), inset 30px 0 45px rgba(255,150,80,0.20);
+  opacity: .78;
+  pointer-events: none;
+}
+.hero > * { position: relative; z-index: 2; max-width: 780px; }
+.hero .badge {
+  background: transparent !important;
+  border: 1px solid rgba(255,255,255,0.30) !important;
+  color: rgba(255,255,255,0.82) !important;
+  border-radius: 0 !important;
+  padding: 9px 15px !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 800;
+  letter-spacing: 1.8px !important;
+  text-transform: uppercase;
+  box-shadow: none !important;
+}
+.hero h1 {
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: clamp(44px, 7.2vw, 104px) !important;
+  font-weight: 900 !important;
+  line-height: .92 !important;
+  letter-spacing: -2.5px;
+  text-transform: uppercase;
+  color: #f7f8fb !important;
+  margin: 24px 0 18px !important;
+  text-shadow: 0 8px 30px rgba(0,0,0,0.7);
+}
+.hero h1 span { color: #fff !important; text-shadow: none !important; }
+.hero .sub {
+  color: rgba(255,255,255,0.76) !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: clamp(15px, 1.3vw, 20px) !important;
+  line-height: 1.55;
+  letter-spacing: .3px !important;
+  max-width: 720px;
+  margin-bottom: 0 !important;
+}
+.hero div[style*="Curated By"] {
+  color: #fff !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: clamp(22px, 2.8vw, 42px) !important;
+  font-weight: 900 !important;
+  letter-spacing: 4px !important;
+  text-shadow: 0 0 30px rgba(255,255,255,0.12) !important;
+  margin: 22px 0 0 !important;
+}
+
+/* Content blocks: black metallic cards */
+.container { max-width: 1120px !important; padding: 0 28px !important; }
+.section-header { padding-top: 74px !important; }
+.section-header .label {
+  color: rgba(255,255,255,0.54) !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 800;
+  letter-spacing: 3px !important;
+}
+.section-header h2, .section-header h2 span {
+  color: #fff !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-weight: 900 !important;
+  text-transform: uppercase;
+  letter-spacing: -0.8px;
+}
+.card, .answer-box {
+  position: relative;
+  background: linear-gradient(180deg, rgba(17,17,17,0.96), rgba(5,5,5,0.98)) !important;
+  border: 1px solid rgba(255,255,255,0.13) !important;
+  border-left: 1px solid rgba(255,255,255,0.13) !important;
+  border-radius: 0 !important;
+  box-shadow: 0 28px 70px rgba(0,0,0,0.52), inset 0 1px 0 rgba(255,255,255,0.08) !important;
+  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+.card::before, .answer-box::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.42), transparent);
+  opacity: .55;
+}
+.card:hover, .answer-box:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255,255,255,0.28) !important;
+  box-shadow: 0 34px 92px rgba(0,0,0,0.66), 0 0 45px rgba(255,255,255,0.05), inset 0 1px 0 rgba(255,255,255,0.12) !important;
+}
+.card h3, .card h4, .answer-box h3, .answer-box h4 {
+  font-family: Arial, Helvetica, sans-serif !important;
+  text-transform: uppercase;
+}
+.card h3 { font-size: 20px !important; letter-spacing: .4px; }
+.card h4 { color: #fff !important; font-size: 12px !important; letter-spacing: 1.6px !important; }
+.def-box, .rule-box, .mnemonic, .tip, .ex, .rev-card, .q-header {
+  background: rgba(255,255,255,0.035) !important;
+  border-color: rgba(255,255,255,0.14) !important;
+  border-radius: 0 !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+}
+.def-box { border-left: 3px solid rgba(255,255,255,0.56) !important; }
+.rule-box { border: 1px solid rgba(255,255,255,0.18) !important; }
+.ex { color: #e9edf6 !important; }
+.hl, .hl2, .hl3, .hl4, td:first-child, .rtag, .tag, .q-num { color: #fff !important; }
+.tbl-wrap { border-color: rgba(255,255,255,0.16) !important; border-radius: 0 !important; }
+thead tr { background: rgba(255,255,255,0.08) !important; }
+thead th {
+  color: #fff !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 900;
+  text-transform: uppercase;
+  border-bottom-color: rgba(255,255,255,0.16) !important;
+}
+tbody tr { border-bottom-color: rgba(255,255,255,0.08) !important; transition: background .2s ease; }
+tbody tr:hover { background: rgba(255,255,255,0.055) !important; }
+td:first-child { font-family: Arial, Helvetica, sans-serif !important; font-weight: 800; }
+footer {
+  background: #000 !important;
+  border-top: 1px solid rgba(255,255,255,0.16) !important;
+  color: rgba(255,255,255,0.60) !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+footer span { color: #fff !important; }
+
+@media (max-width: 1100px) {
+  .desktop-nav { display: none !important; }
+  .brand-lockup { min-width: auto !important; }
+}
+@media (max-width: 760px) {
+  .site-header-inner { padding: 0 20px !important; min-height: 62px !important; }
+  .brand-wordmark { font-size: 18px; letter-spacing: 5px; }
+  .brand-subline { display: none; }
+  .ashish-chip { display: none !important; }
+  .hero { min-height: 78vh; padding: 116px 24px 68px !important; }
+  .hero::after { width: 62vw; right: -18vw; top: 30%; opacity: .48; }
+  .hero h1 { font-size: clamp(38px, 13vw, 64px) !important; letter-spacing: -1.2px; }
+  .container { padding: 0 18px !important; }
+  .card { padding: 22px 18px !important; }
+  .side-menu { padding: 28px 24px !important; }
+}
+
+
+
+/* ===== QUICK FIX: ORIGINAL CONTENT-RELATED HERO + STRONG HOVER EFFECTS ===== */
+.hero {
+  min-height: 84vh !important;
+  padding: 132px 7vw 86px !important;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,0.98) 0%, rgba(0,0,0,0.94) 34%, rgba(0,0,0,0.72) 58%, rgba(0,0,0,0.96) 100%),
+    radial-gradient(circle at 76% 42%, rgba(255,255,255,0.16) 0%, rgba(255,255,255,0.07) 18%, transparent 42%),
+    radial-gradient(circle at 86% 72%, rgba(180,190,210,0.10) 0%, transparent 28%),
+    linear-gradient(135deg, #000 0%, #050505 45%, #000 100%) !important;
+  overflow: hidden !important;
+}
+.hero::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  width: auto !important;
+  height: auto !important;
+  left: 0 !important;
+  top: 0 !important;
+  transform: none !important;
+  opacity: .65 !important;
+  background:
+    linear-gradient(115deg, transparent 0 58%, rgba(255,255,255,0.045) 58.2% 58.8%, transparent 59% 100%),
+    linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px),
+    radial-gradient(1px 1px at 18% 25%, rgba(255,255,255,0.62), transparent),
+    radial-gradient(1px 1px at 42% 68%, rgba(255,255,255,0.40), transparent),
+    radial-gradient(1px 1px at 91% 28%, rgba(255,255,255,0.48), transparent) !important;
+  background-size: auto, 82px 82px, 82px 82px, 500px 500px, 620px 620px, 540px 540px !important;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 16%, #000 88%, transparent 100%);
+  pointer-events: none;
+}
+.hero::after {
+  content: 'ENGLISH\A LEVEL-4\A GRAMMAR • VOCABULARY • SPEAKING' !important;
+  white-space: pre-line;
+  position: absolute !important;
+  right: 7vw !important;
+  top: 23% !important;
+  width: min(36vw, 520px) !important;
+  min-height: 330px !important;
+  border-radius: 0 !important;
+  border: 1px solid rgba(255,255,255,0.22) !important;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.16), rgba(255,255,255,0.035) 42%, rgba(0,0,0,0.76)),
+    repeating-linear-gradient(0deg, transparent 0 34px, rgba(255,255,255,0.08) 35px 36px),
+    linear-gradient(180deg, rgba(14,14,14,0.96), rgba(0,0,0,0.98)) !important;
+  box-shadow:
+    0 0 80px rgba(255,255,255,0.12),
+    0 42px 110px rgba(0,0,0,0.78),
+    inset 0 1px 0 rgba(255,255,255,0.26),
+    inset 0 -70px 110px rgba(0,0,0,0.76) !important;
+  transform: perspective(900px) rotateY(-14deg) rotateX(5deg) !important;
+  display: flex !important;
+  align-items: flex-end !important;
+  justify-content: flex-start !important;
+  padding: 34px !important;
+  color: rgba(255,255,255,0.94) !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: clamp(18px, 2.2vw, 34px) !important;
+  line-height: 1.08 !important;
+  font-weight: 900 !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important;
+  text-shadow: 0 8px 26px rgba(0,0,0,0.85) !important;
+  opacity: .88 !important;
+  pointer-events: none;
+}
+.hero .badge {
+  transition: transform .25s ease, box-shadow .25s ease, color .25s ease, background .25s ease !important;
+}
+.hero .badge:hover {
+  transform: translateY(-3px) !important;
+  color: #000 !important;
+  background: #fff !important;
+  box-shadow: 0 0 38px rgba(255,255,255,0.18) !important;
+}
+.hero h1 {
+  max-width: 850px !important;
+  transition: transform .35s ease, text-shadow .35s ease !important;
+}
+.hero h1:hover {
+  transform: translateX(8px) !important;
+  text-shadow: 0 0 35px rgba(255,255,255,0.16), 0 10px 40px rgba(0,0,0,0.9) !important;
+}
+.hero div[style*="Curated By"] {
+  display: inline-block !important;
+  padding-bottom: 8px !important;
+  border-bottom: 2px solid rgba(255,255,255,0.32) !important;
+  transition: letter-spacing .25s ease, transform .25s ease, border-color .25s ease !important;
+}
+.hero div[style*="Curated By"]:hover {
+  letter-spacing: 6px !important;
+  transform: translateY(-2px) !important;
+  border-color: #fff !important;
+}
+.card, .answer-box, .rev-card, .def-box, .rule-box, .mnemonic, .tip, .ex, .tbl-wrap {
+  transition: transform .26s ease, border-color .26s ease, box-shadow .26s ease, background .26s ease !important;
+}
+.card:hover, .answer-box:hover {
+  transform: translateY(-7px) scale(1.006) !important;
+  border-color: rgba(255,255,255,0.36) !important;
+  box-shadow:
+    0 44px 110px rgba(0,0,0,0.72),
+    0 0 60px rgba(255,255,255,0.075),
+    inset 0 1px 0 rgba(255,255,255,0.16) !important;
+}
+.card:hover h3, .answer-box:hover h3 { letter-spacing: 1.2px !important; }
+.def-box:hover, .rule-box:hover, .mnemonic:hover, .tip:hover, .ex:hover {
+  transform: translateX(6px) !important;
+  border-color: rgba(255,255,255,0.34) !important;
+  background: rgba(255,255,255,0.055) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.11), 0 12px 30px rgba(0,0,0,0.28) !important;
+}
+.tbl-wrap:hover {
+  transform: translateY(-3px) !important;
+  border-color: rgba(255,255,255,0.30) !important;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.45) !important;
+}
+tbody tr { transition: background .18s ease, transform .18s ease, color .18s ease !important; }
+tbody tr:hover {
+  background: rgba(255,255,255,0.075) !important;
+  color: #fff !important;
+}
+.menu-links a:hover, .desktop-nav a:hover {
+  text-shadow: 0 0 18px rgba(255,255,255,0.32) !important;
+}
+.side-menu {
+  background:
+    linear-gradient(180deg, rgba(10,10,10,0.98), rgba(0,0,0,0.99)),
+    radial-gradient(circle at 70% 0%, rgba(255,255,255,0.12), transparent 42%) !important;
+}
+@media (max-width: 900px) {
+  .hero::after {
+    right: -18vw !important;
+    top: 39% !important;
+    width: 72vw !important;
+    min-height: 250px !important;
+    opacity: .28 !important;
+    font-size: 24px !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<!-- SPACEX-STYLE STICKY HEADER + HAMBURGER MENU -->
+<header class="site-header" aria-label="Main navigation">
+  <div class="site-header-inner">
+    <a class="brand-lockup" href="#" style="text-decoration:none;" aria-label="Go to top">
+      <div class="brand-wordmark">ASHISH</div>
+      <div class="brand-subline">ENGLISH LEVEL-4 NOTES</div>
+    </a>
+    <nav class="desktop-nav" aria-label="Quick section links">
+      <a href="#unit1">Unit I</a>
+      <a href="#unit2">Unit II</a>
+      <a href="#unit3">Unit III</a>
+      <a href="#unit4">Unit IV</a>
+      <a href="#revision">REVISION</a>
+      <a href="#answers">PYQ</a>
+      <a href="#tips">TIPS</a>
+    </nav>
+    <div class="header-actions">
+      <div class="ashish-chip">PREPARED BY ASHISH</div>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="sideMenu" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="menu-overlay" data-close-menu></div>
+<aside class="side-menu" id="sideMenu" aria-label="Hamburger menu">
+  <div class="side-menu-top">
+    <div class="side-menu-title">MISSION MENU<span>Jump to any study section</span></div>
+    <button class="close-menu" type="button" aria-label="Close menu" data-close-menu>×</button>
+  </div>
+  <nav class="menu-links">
+    <a href="#unit1">Unit I: Vocabulary Building</a>
+    <a href="#unit2">Unit II: Types & Transformation of Sentences</a>
+    <a href="#unit3">Unit III: Public Speech & Conversation</a>
+    <a href="#unit4">Unit IV: Coherence & Vocabulary</a>
+    <a href="#revision">Quick Revision</a>
+    <a href="#answers">Previous Year Question Answers / PYQ Answers</a>
+    <a href="#tips">Exam Tips</a>
+  </nav>
+  <div class="menu-note">Smooth navigation · SpaceX-level shining black theme · Ashish</div>
+</aside>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="badge">PAPER: B23-AEC-411</div>
+  <h1>English Language &<br><span>Communication Level-4</span></h1>
+  <p class="sub">COMPLETE EXAM NOTES — All 4 Units &nbsp;|&nbsp; All Questions Covered</p>
+  <div style="font-family:'Playfair Display',serif; font-size:clamp(28px,4vw,44px); font-weight:900; color:var(--accent); letter-spacing:2px; margin:12px 0 24px; text-transform:uppercase; text-shadow:0 0 18px rgba(240,165,0,0.25);">Curated By: ASHISH</div>
+  <div class="meta-row">
+    <div class="meta-pill">⏱ TIME: 3 HOURS</div>
+    <div class="meta-pill">📝 ATTEMPT: 5 QUESTIONS</div>
+    <div class="meta-pill">⚖ 7 MARKS EACH</div>
+    <div class="meta-pill">📅 EXAM TOMORROW</div>
+  </div>
+</div>
+
+<!-- TOC -->
+<nav class="toc">
+  <a href="#unit1">Unit I: Vocabulary</a>
+  <a href="#unit2">Unit II: Sentences</a>
+  <a href="#unit3">Unit III: Public Speaking</a>
+  <a href="#unit4">Unit IV: Coherence</a>
+  <a href="#revision">Quick Revision</a>
+  <a href="#answers">PYQ Answers</a>
+  <a href="#tips">Exam Tips</a>
+</nav>
+
+<!-- ===== UNIT I ===== -->
+<div class="container">
+<div id="unit1" class="section-header u1">
+  <div class="label">UNIT — I</div>
+  <h2><span>Vocabulary Building</span></h2>
+  <p style="color:var(--muted); font-size:14px; margin-top:8px;">Word Roots · Prefixes · Suffixes · Word Formation</p>
+</div>
+
+<!-- WORD ROOTS -->
+<div class="card accent-u1">
+  <h3>1. Word Roots — The Foundation</h3>
+  <div class="def-box">
+    <strong>Root / Base Word:</strong> The core part of a word that carries its basic meaning. It cannot be broken down further. Prefixes and suffixes are added to it.
+  </div>
+  <p style="font-size:14px; margin-bottom:12px;"><span class="hl">Root vs Stem vs Base:</span> Root = smallest meaningful unit (e.g., <em>port</em>) | Stem = root + any prefix/suffix before new addition | Base = the form to which inflections are added</p>
+
+  <h4>Important Latin Roots</h4>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Root</th><th>Meaning</th><th>Examples</th></tr></thead>
+    <tbody>
+      <tr><td>dict</td><td>say / speak</td><td>dictate, predict, contradict</td></tr>
+      <tr><td>port</td><td>carry</td><td>transport, import, portable</td></tr>
+      <tr><td>aud</td><td>hear</td><td>audio, audible, audience</td></tr>
+      <tr><td>vis / vid</td><td>see</td><td>visible, video, vision</td></tr>
+      <tr><td>scrib / script</td><td>write</td><td>describe, scripture, manuscript</td></tr>
+      <tr><td>rupt</td><td>break</td><td>rupture, interrupt, corrupt</td></tr>
+      <tr><td>ject</td><td>throw</td><td>reject, project, inject</td></tr>
+      <tr><td>tract</td><td>pull / draw</td><td>attract, extract, contract</td></tr>
+      <tr><td>struct</td><td>build</td><td>structure, construct, instruct</td></tr>
+      <tr><td>mit / miss</td><td>send</td><td>admit, mission, transmit</td></tr>
+      <tr><td>ven / vent</td><td>come</td><td>venture, prevent, convention</td></tr>
+      <tr><td>fac / fect</td><td>make / do</td><td>factory, affect, perfect</td></tr>
+      <tr><td>cred</td><td>believe</td><td>credible, credit, incredible</td></tr>
+      <tr><td>mort</td><td>death</td><td>mortal, immortal, mortuary</td></tr>
+      <tr><td>cap / cept</td><td>take / seize</td><td>capture, accept, concept</td></tr>
+      <tr><td>duc / duct</td><td>lead</td><td>educate, conduct, produce</td></tr>
+      <tr><td>spec</td><td>look / see</td><td>spectacle, inspect, suspect</td></tr>
+      <tr><td>voc</td><td>voice / call</td><td>vocal, invoke, vocabulary</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4>Important Greek Roots</h4>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Root</th><th>Meaning</th><th>Examples</th></tr></thead>
+    <tbody>
+      <tr><td>graph</td><td>write</td><td>photograph, biography, paragraph</td></tr>
+      <tr><td>logy</td><td>study of</td><td>biology, psychology, technology</td></tr>
+      <tr><td>phon</td><td>sound</td><td>telephone, microphone, symphony</td></tr>
+      <tr><td>bio</td><td>life</td><td>biography, biology, antibiotic</td></tr>
+      <tr><td>geo</td><td>earth</td><td>geography, geology, geometry</td></tr>
+      <tr><td>auto</td><td>self</td><td>automatic, autobiography, automobile</td></tr>
+      <tr><td>micro</td><td>small</td><td>microphone, microscope, microwave</td></tr>
+      <tr><td>tele</td><td>far / distant</td><td>television, telephone, telescope</td></tr>
+      <tr><td>photo</td><td>light</td><td>photograph, photosynthesis, photon</td></tr>
+      <tr><td>therm</td><td>heat</td><td>thermometer, thermal, thermostat</td></tr>
+      <tr><td>chron</td><td>time</td><td>chronology, chronic, synchronize</td></tr>
+      <tr><td>dem</td><td>people</td><td>democracy, epidemic, demography</td></tr>
+      <tr><td>path</td><td>feeling / disease</td><td>sympathy, pathology, empathy</td></tr>
+      <tr><td>psych</td><td>mind</td><td>psychology, psychologist, psychiatry</td></tr>
+      <tr><td>scope</td><td>look / examine</td><td>telescope, microscope, horoscope</td></tr>
+      <tr><td>meter</td><td>measure</td><td>thermometer, kilometer, barometer</td></tr>
+      <tr><td>nym</td><td>name</td><td>synonym, antonym, anonymous</td></tr>
+      <tr><td>cycl</td><td>circle / wheel</td><td>bicycle, cycle, encyclopedia</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="mnemonic">
+    <span class="tag">💡 TRICK</span>
+    If you see <strong>-logy</strong>, it always means "study of." If you see <strong>-phon-</strong>, it relates to sound. If you see <strong>-graph-</strong>, it means writing. These 3 Greek roots appear in almost every exam!
+  </div>
+</div>
+
+<!-- PREFIXES -->
+<div class="card accent-u1">
+  <h3>2. Prefixes — Added to the Beginning</h3>
+  <div class="def-box">
+    <strong>Prefix:</strong> A group of letters added at the BEGINNING of a root word to change or add to its meaning. It does NOT form a new word by itself.
+  </div>
+
+  <h4>Negative Prefixes</h4>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Prefix</th><th>Meaning</th><th>Examples</th></tr></thead>
+    <tbody>
+      <tr><td>un-</td><td>not</td><td>unhappy, unkind, unknown</td></tr>
+      <tr><td>in-</td><td>not</td><td>incomplete, incorrect, invisible</td></tr>
+      <tr><td>im-</td><td>not (before m/p/b)</td><td>impossible, impatient, immature</td></tr>
+      <tr><td>il-</td><td>not (before l)</td><td>illegal, illogical, illiterate</td></tr>
+      <tr><td>ir-</td><td>not (before r)</td><td>irregular, irresponsible, irrational</td></tr>
+      <tr><td>dis-</td><td>not / opposite</td><td>disagree, dishonest, disappear</td></tr>
+      <tr><td>mis-</td><td>wrongly</td><td>misunderstand, mislead, misbehave</td></tr>
+      <tr><td>non-</td><td>not</td><td>nonviolent, nonfiction, nonsense</td></tr>
+      <tr><td>anti-</td><td>against</td><td>antibiotic, antisocial, antivirus</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4>Number Prefixes</h4>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Prefix</th><th>Meaning</th><th>Examples</th></tr></thead>
+    <tbody>
+      <tr><td>uni-</td><td>one</td><td>unicorn, uniform, universal</td></tr>
+      <tr><td>bi-</td><td>two</td><td>bicycle, bilateral, bilingual</td></tr>
+      <tr><td>tri-</td><td>three</td><td>triangle, tricycle, trilogy</td></tr>
+      <tr><td>mono-</td><td>one / alone</td><td>monologue, monotone, monopoly</td></tr>
+      <tr><td>poly-</td><td>many</td><td>polygon, polyglot, polynomial</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4>Time / Position / Other Prefixes</h4>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Prefix</th><th>Meaning</th><th>Examples</th></tr></thead>
+    <tbody>
+      <tr><td>pre-</td><td>before</td><td>preview, prehistoric, prepare</td></tr>
+      <tr><td>post-</td><td>after</td><td>postwar, postpone, postgraduate</td></tr>
+      <tr><td>ex-</td><td>out / former</td><td>export, exhale, ex-president</td></tr>
+      <tr><td>re-</td><td>again</td><td>rewrite, return, review</td></tr>
+      <tr><td>pro-</td><td>forward / for</td><td>progress, promote, propose</td></tr>
+      <tr><td>sub-</td><td>under / below</td><td>submarine, subway, subtitle</td></tr>
+      <tr><td>super-</td><td>above / over</td><td>supernatural, supermarket, supervisor</td></tr>
+      <tr><td>inter-</td><td>between</td><td>international, interact, internet</td></tr>
+      <tr><td>intra-</td><td>within</td><td>intranet, intracellular, intravenous</td></tr>
+      <tr><td>trans-</td><td>across</td><td>transport, transform, translate</td></tr>
+      <tr><td>over-</td><td>too much / above</td><td>overwork, overcome, overpower</td></tr>
+      <tr><td>under-</td><td>below / less</td><td>underestimate, underground, underline</td></tr>
+      <tr><td>co-</td><td>together / with</td><td>cooperate, coexist, coordinate</td></tr>
+      <tr><td>semi-</td><td>half</td><td>semicircle, semifinal, semicolon</td></tr>
+      <tr><td>fore-</td><td>before / front</td><td>foresee, forehead, forecast</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="rule-box">
+    <span class="rtag">PRACTICE — IDENTIFY PREFIX</span>
+    prehistoric → <strong>pre-</strong> + historic | supernatural → <strong>super-</strong> + natural | misunderstand → <strong>mis-</strong> + understand | extraordinary → <strong>extra-</strong> + ordinary | bilateral → <strong>bi-</strong> + lateral
+  </div>
+</div>
+
+<!-- SUFFIXES -->
+<div class="card accent-u1">
+  <h3>3. Suffixes — Added to the End</h3>
+  <div class="def-box">
+    <strong>Suffix:</strong> A group of letters added at the END of a root word to change its form (noun, verb, adjective, adverb) or meaning.
+  </div>
+
+  <h4>Noun Suffixes (make a word into a noun)</h4>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Suffix</th><th>Meaning</th><th>Examples</th></tr></thead>
+    <tbody>
+      <tr><td>-tion / -sion</td><td>act / state / result</td><td>education, action, decision</td></tr>
+      <tr><td>-ment</td><td>state / action</td><td>development, movement, achievement</td></tr>
+      <tr><td>-ness</td><td>state / quality</td><td>happiness, kindness, darkness</td></tr>
+      <tr><td>-ity / -ty</td><td>quality / state</td><td>ability, purity, creativity</td></tr>
+      <tr><td>-er / -or / -ar</td><td>person who does</td><td>teacher, doctor, scholar</td></tr>
+      <tr><td>-ist</td><td>one who practices</td><td>artist, scientist, journalist</td></tr>
+      <tr><td>-ism</td><td>doctrine / belief</td><td>capitalism, nationalism, terrorism</td></tr>
+      <tr><td>-ance / -ence</td><td>quality / state</td><td>importance, excellence, patience</td></tr>
+      <tr><td>-hood</td><td>state / condition</td><td>childhood, neighbourhood, brotherhood</td></tr>
+      <tr><td>-ship</td><td>quality / skill</td><td>leadership, friendship, scholarship</td></tr>
+      <tr><td>-dom</td><td>state / realm</td><td>freedom, kingdom, wisdom</td></tr>
+      <tr><td>-age</td><td>action / process</td><td>marriage, usage, storage</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4>Adjective Suffixes</h4>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Suffix</th><th>Meaning</th><th>Examples</th></tr></thead>
+    <tbody>
+      <tr><td>-ful</td><td>full of</td><td>beautiful, helpful, powerful</td></tr>
+      <tr><td>-less</td><td>without</td><td>hopeless, careless, homeless</td></tr>
+      <tr><td>-ous / -ious</td><td>having quality of</td><td>dangerous, glorious, famous</td></tr>
+      <tr><td>-al / -ial</td><td>relating to</td><td>national, official, natural</td></tr>
+      <tr><td>-ic</td><td>relating to</td><td>electric, historic, academic</td></tr>
+      <tr><td>-ive / -ative</td><td>tending to</td><td>creative, active, sensitive</td></tr>
+      <tr><td>-able / -ible</td><td>capable of</td><td>comfortable, possible, readable</td></tr>
+      <tr><td>-ish</td><td>somewhat like</td><td>childish, foolish, reddish</td></tr>
+      <tr><td>-y</td><td>having quality of</td><td>cloudy, rainy, healthy</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4>Verb Suffixes</h4>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Suffix</th><th>Examples</th></tr></thead>
+    <tbody>
+      <tr><td>-ize / -ise</td><td>modernize, organize, realize</td></tr>
+      <tr><td>-ify / -fy</td><td>clarify, simplify, purify</td></tr>
+      <tr><td>-ate</td><td>educate, celebrate, demonstrate</td></tr>
+      <tr><td>-en</td><td>widen, strengthen, lighten</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4>Adverb Suffix</h4>
+  <div class="ex"><span class="label-ex">SUFFIX</span>-ly → quickly, slowly, happily, beautifully, carefully</div>
+</div>
+
+<!-- WORD FORMATION -->
+<div class="card accent-u1">
+  <h3>4. Word Formation Processes</h3>
+
+  <h4>A. Derivation (Prefix/Suffix Added)</h4>
+  <p style="font-size:14px; margin-bottom:10px;">Adding a prefix or suffix to change meaning or word class.</p>
+  <div class="ex"><span class="label-ex">EXAMPLES</span>
+    happy → unhappy (prefix un-) | teach → teacher (suffix -er) | beauty → beautiful (suffix -ful) | nation → national (suffix -al) | act → action (suffix -tion)
+  </div>
+
+  <h4>B. Compounding (Two Words Combined)</h4>
+  <p style="font-size:14px; margin-bottom:10px;">Two separate words are combined to form a new word.</p>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Word 1</th><th>Word 2</th><th>Compound</th></tr></thead>
+    <tbody>
+      <tr><td>sun</td><td>shine</td><td>sunshine</td></tr>
+      <tr><td>black</td><td>board</td><td>blackboard</td></tr>
+      <tr><td>foot</td><td>ball</td><td>football</td></tr>
+      <tr><td>rain</td><td>bow</td><td>rainbow</td></tr>
+      <tr><td>fire</td><td>work</td><td>firework</td></tr>
+      <tr><td>news</td><td>paper</td><td>newspaper</td></tr>
+      <tr><td>tooth</td><td>brush</td><td>toothbrush</td></tr>
+      <tr><td>water</td><td>fall</td><td>waterfall</td></tr>
+      <tr><td>book</td><td>store</td><td>bookstore</td></tr>
+      <tr><td>hand</td><td>shake</td><td>handshake</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4>C. Blending (Two Words Merged)</h4>
+  <p style="font-size:14px; margin-bottom:10px;">Parts of two words are combined (portmanteau words).</p>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Word 1 + Word 2</th><th>Blend</th></tr></thead>
+    <tbody>
+      <tr><td>breakfast + lunch</td><td>brunch</td></tr>
+      <tr><td>smoke + fog</td><td>smog</td></tr>
+      <tr><td>web + seminar</td><td>webinar</td></tr>
+      <tr><td>motor + hotel</td><td>motel</td></tr>
+      <tr><td>television + evangelist</td><td>televangelist</td></tr>
+      <tr><td>information + entertainment</td><td>infotainment</td></tr>
+      <tr><td>camera + recorder</td><td>camcorder</td></tr>
+      <tr><td>education + entertainment</td><td>edutainment</td></tr>
+      <tr><td>gleam + shimmer</td><td>glimmer</td></tr>
+      <tr><td>spoon + fork</td><td>spork</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4>D. Other Word Formation Methods</h4>
+  <ul class="list">
+    <li><strong>Conversion / Zero Derivation:</strong> Word class changes without adding anything. Example: <em>run</em> (verb) → <em>a run</em> (noun); <em>book</em> (noun) → <em>to book</em> (verb)</li>
+    <li><strong>Clipping:</strong> Shortening a word. Example: advertisement → <em>ad</em>; examination → <em>exam</em>; laboratory → <em>lab</em>; photograph → <em>photo</em></li>
+    <li><strong>Back-formation:</strong> A new word made by removing a suffix. Example: <em>editor</em> → edit; <em>television</em> → televise; <em>burglar</em> → burgle</li>
+    <li><strong>Acronyms:</strong> NATO, LASER (Light Amplification by Stimulated Emission of Radiation), RADAR, AIDS, COVID</li>
+    <li><strong>Abbreviations:</strong> Dr., Mr., etc., e.g., i.e.</li>
+  </ul>
+
+  <h4>Practice: Identify Root + Prefix + Suffix</h4>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Word</th><th>Prefix</th><th>Root</th><th>Suffix</th></tr></thead>
+    <tbody>
+      <tr><td>uncomfortable</td><td>un-</td><td>comfort</td><td>-able</td></tr>
+      <tr><td>unhappiness</td><td>un-</td><td>happy/happ</td><td>-iness</td></tr>
+      <tr><td>disorganized</td><td>dis-</td><td>organ</td><td>-ized</td></tr>
+      <tr><td>misunderstanding</td><td>mis-</td><td>understand</td><td>-ing</td></tr>
+      <tr><td>unbelievable</td><td>un-</td><td>believe/believ</td><td>-able</td></tr>
+      <tr><td>prehistoric</td><td>pre-</td><td>histor</td><td>-ic</td></tr>
+      <tr><td>supernatural</td><td>super-</td><td>natur</td><td>-al</td></tr>
+      <tr><td>impossible</td><td>im-</td><td>poss</td><td>-ible</td></tr>
+      <tr><td>reactivate</td><td>re-</td><td>activ</td><td>-ate</td></tr>
+      <tr><td>international</td><td>inter-</td><td>nation</td><td>-al</td></tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ===== UNIT II ===== -->
+<div id="unit2" class="section-header u2">
+  <div class="label">UNIT — II</div>
+  <h2><span>Types & Transformation of Sentences</span></h2>
+  <p style="color:var(--muted); font-size:14px; margin-top:8px;">Types · Simple/Compound/Complex · Active-Passive · Transformations</p>
+</div>
+
+<!-- TYPES BY PURPOSE -->
+<div class="card accent-u2">
+  <h3>1. Types of Sentences Based on Purpose</h3>
+
+  <h4>A. Assertive / Declarative Sentence</h4>
+  <div class="def-box c2"><strong>Definition:</strong> A sentence that states a fact, opinion, or idea. It ends with a full stop (.)</div>
+  <div class="ex"><span class="label-ex">EXAMPLES</span>
+    1. The sun rises in the east.<br>
+    2. She is a good student.<br>
+    3. He does not like coffee. (Negative Assertive)<br>
+    4. India is a democratic country.<br>
+    5. They did not complete the project.
+  </div>
+
+  <h4>B. Interrogative Sentence</h4>
+  <div class="def-box c2"><strong>Definition:</strong> A sentence that asks a question. It ends with a question mark (?)</div>
+  <p style="font-size:14px; margin:8px 0;"><strong>Two Types:</strong></p>
+  <ul class="list">
+    <li><span class="hl2">Yes/No Questions:</span> Can you swim? | Is she coming? | Did he pass? | Have you eaten? | Will they come?</li>
+    <li><span class="hl2">Wh- Questions:</span> Where are you going? | What is your name? | Who wrote this? | When did you arrive? | Why are you late?</li>
+  </ul>
+
+  <h4>C. Imperative Sentence</h4>
+  <div class="def-box c2"><strong>Definition:</strong> A sentence that gives a command, request, advice, or instruction. The subject 'you' is usually hidden (implied).</div>
+  <div class="ex"><span class="label-ex">EXAMPLES</span>
+    1. Close the door. (command)<br>
+    2. Please help me. (request)<br>
+    3. Study hard. (advice)<br>
+    4. Don't make noise. (negative command)<br>
+    5. Turn left at the signal. (instruction)
+  </div>
+
+  <h4>D. Exclamatory Sentence</h4>
+  <div class="def-box c2"><strong>Definition:</strong> A sentence that expresses strong emotion (surprise, joy, anger, sadness). It ends with an exclamation mark (!)</div>
+  <div class="ex"><span class="label-ex">EXAMPLES</span>
+    1. What a beautiful painting!<br>
+    2. How brave he is!<br>
+    3. Excellent! You did it!<br>
+    4. Oh no, I missed the bus!<br>
+    5. What a lovely day!
+  </div>
+
+  <h4>E. Optative Sentence</h4>
+  <div class="def-box c2"><strong>Definition:</strong> A sentence that expresses a wish, desire, or prayer. Often begins with "May" or "Would that".</div>
+  <div class="ex"><span class="label-ex">EXAMPLES</span>
+    1. May you live long!<br>
+    2. May God bless you!<br>
+    3. Would that I were young again!<br>
+    4. May your dreams come true!<br>
+    5. May peace prevail everywhere!
+  </div>
+</div>
+
+<!-- TYPES BY STRUCTURE -->
+<div class="card accent-u2">
+  <h3>2. Types of Sentences Based on Structure</h3>
+
+  <h4>A. Simple Sentence</h4>
+  <div class="def-box c2"><strong>Definition:</strong> A sentence with ONE independent clause — one subject and one predicate. It expresses a complete thought.</div>
+  <div class="ex"><span class="label-ex">STRUCTURE</span>[Subject] + [Verb] + [Object/Complement]</div>
+  <div class="ex"><span class="label-ex">EXAMPLES</span>
+    1. She sings beautifully.<br>
+    2. The dog barked loudly.<br>
+    3. I love cricket.<br>
+    4. The teacher explained the lesson.<br>
+    5. They completed the project on time.<br>
+    6. He is reading a book.<br>
+    7. Birds fly in the sky.<br>
+    8. My mother cooks delicious food.
+  </div>
+
+  <h4>B. Compound Sentence</h4>
+  <div class="def-box c2"><strong>Definition:</strong> Two or more INDEPENDENT clauses joined by coordinating conjunctions (FANBOYS).</div>
+  <div class="mnemonic">
+    <span class="tag">💡 MNEMONIC — FANBOYS</span>
+    <strong>F</strong>or · <strong>A</strong>nd · <strong>N</strong>or · <strong>B</strong>ut · <strong>O</strong>r · <strong>Y</strong>et · <strong>S</strong>o
+  </div>
+  <div class="ex"><span class="label-ex">EXAMPLES</span>
+    1. I studied hard, but I failed the exam.<br>
+    2. She was tired, so she went to bed early.<br>
+    3. He can sing, and he can also dance.<br>
+    4. You must work hard, or you will fail.<br>
+    5. It was raining, yet they went out.<br>
+    6. I wanted to come, but I had no time.<br>
+    7. She is intelligent, and she is hardworking.<br>
+    8. He didn't eat, nor did he sleep.
+  </div>
+
+  <h4>C. Complex Sentence</h4>
+  <div class="def-box c2"><strong>Definition:</strong> One INDEPENDENT clause + one or more DEPENDENT (subordinate) clauses joined by subordinating conjunctions.</div>
+  <p style="font-size:14px; margin:8px 0;"><strong>Common Subordinating Conjunctions:</strong> because, although, when, if, since, unless, until, while, after, before, as, though, wherever, whenever, even though, so that, in order that</p>
+  <div class="ex"><span class="label-ex">EXAMPLES</span>
+    1. Because he studied hard, he passed the exam.<br>
+    2. Although she was tired, she continued working.<br>
+    3. He is so tired that he cannot work.<br>
+    4. If you work hard, you will succeed.<br>
+    5. When the bell rang, the students left.<br>
+    6. I will wait until you return.<br>
+    7. She left before I arrived.<br>
+    8. Unless you hurry, you will miss the train.
+  </div>
+</div>
+
+<!-- TRANSFORMATION -->
+<div class="card accent-u2">
+  <h3>3. Sentence Transformation</h3>
+
+  <h4>A. Affirmative to Negative</h4>
+  <div class="rule-box">
+    <span class="rtag">MOST IMPORTANT RULE</span>
+    In Affirmative to Negative transformation, the <strong>meaning must not change</strong>. Do not simply add "not" if it makes the opposite meaning. Use the opposite word with "not", or use negative structures that keep the same meaning.
+  </div>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Rule</th><th>Affirmative</th><th>Negative with Same Meaning</th></tr></thead>
+    <tbody>
+      <tr><td>Positive adjective → not + opposite adjective</td><td>He is honest.</td><td>He is not dishonest.</td></tr>
+      <tr><td>Positive adjective → not + opposite adjective</td><td>She is happy.</td><td>She is not unhappy.</td></tr>
+      <tr><td>Positive quality → not + opposite quality</td><td>Ravi is brave.</td><td>Ravi is not cowardly.</td></tr>
+      <tr><td>always + positive verb → never + opposite verb</td><td>He always tells the truth.</td><td>He never tells a lie.</td></tr>
+      <tr><td>everyone/everybody → no one/nobody + opposite verb</td><td>Everyone loves him.</td><td>No one hates him.</td></tr>
+      <tr><td>all → none + opposite meaning</td><td>All students were present.</td><td>No student was absent.</td></tr>
+      <tr><td>only → none but</td><td>Only the brave deserve respect.</td><td>None but the brave deserve respect.</td></tr>
+      <tr><td>too...to → so...that...cannot</td><td>He is too weak to walk.</td><td>He is so weak that he cannot walk.</td></tr>
+      <tr><td>must → cannot but</td><td>We must obey the law.</td><td>We cannot but obey the law.</td></tr>
+      <tr><td>as soon as → no sooner...than</td><td>As soon as he came, she left.</td><td>No sooner did he come than she left.</td></tr>
+      <tr><td>as...as → not + comparative</td><td>He is as tall as Ram.</td><td>Ram is not taller than he.</td></tr>
+      <tr><td>Positive verb → not fail to</td><td>He remembered my advice.</td><td>He did not fail to remember my advice.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="tip">Wrong: "He is honest" → "He is not honest" because the meaning changes. Correct: "He is honest" → "He is not dishonest" because the meaning remains the same.</div>
+
+  <h4>B. Assertive to Interrogative</h4>
+  <div class="rule-box">
+    <span class="rtag">KEY RULES</span>
+    Rule 1: Positive assertive → Negative interrogative<br>
+    Rule 2: Negative assertive → Positive interrogative<br>
+    Rule 3: Use "Is it not / Isn't it / Don't you think?" forms<br>
+    Rule 4: "Everyone knows..." → "Who does not know...?"
+  </div>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Assertive</th><th>Interrogative</th></tr></thead>
+    <tbody>
+      <tr><td>The earth is round.</td><td>Is the earth not round? / Isn't the earth round?</td></tr>
+      <tr><td>He is a good boy.</td><td>Is he not a good boy?</td></tr>
+      <tr><td>She cannot swim.</td><td>Can she swim?</td></tr>
+      <tr><td>Everyone knows this fact.</td><td>Who does not know this fact?</td></tr>
+      <tr><td>It is very hot today.</td><td>Isn't it very hot today?</td></tr>
+      <tr><td>He did not come.</td><td>Did he come?</td></tr>
+      <tr><td>Honesty is the best policy.</td><td>Is honesty not the best policy?</td></tr>
+      <tr><td>She writes beautifully.</td><td>Does she not write beautifully?</td></tr>
+      <tr><td>We should help the poor.</td><td>Should we not help the poor?</td></tr>
+      <tr><td>No one can deny this truth.</td><td>Who can deny this truth?</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4>C. Simple ↔ Complex Transformation</h4>
+  <div class="rule-box">
+    <span class="rtag">KEY RULE</span>
+    "too...to" → "so...that...cannot/could not"<br>
+    Example: He is <strong>too tired to work</strong> → He is <strong>so tired that he cannot work</strong>.
+  </div>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Simple Sentence</th><th>Complex Sentence</th></tr></thead>
+    <tbody>
+      <tr><td>He is too old to run.</td><td>He is so old that he cannot run.</td></tr>
+      <tr><td>She is too weak to lift the box.</td><td>She is so weak that she cannot lift the box.</td></tr>
+      <tr><td>He came to help me.</td><td>He came so that he could help me.</td></tr>
+      <tr><td>Despite being rich, he is unhappy.</td><td>Although he is rich, he is unhappy.</td></tr>
+      <tr><td>On reaching home, he slept.</td><td>When he reached home, he slept.</td></tr>
+      <tr><td>Working hard, she won the prize.</td><td>Because she worked hard, she won the prize.</td></tr>
+      <tr><td>The news of his arrival surprised us.</td><td>We were surprised when he arrived.</td></tr>
+      <tr><td>I know his address.</td><td>I know where he lives.</td></tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<!-- ACTIVE PASSIVE -->
+<div class="card accent-u2">
+  <h3>4. Active Voice ↔ Passive Voice</h3>
+  <div class="def-box c2">
+    <strong>Active Voice:</strong> Subject performs the action. (Ram ate the mango.)<br>
+    <strong>Passive Voice:</strong> Subject receives the action. (The mango was eaten by Ram.)
+  </div>
+  <div class="rule-box">
+    <span class="rtag">FORMULA</span>
+    Active: Subject + Verb + Object<br>
+    Passive: Object + Helping Verb + V3 (past participle) + by + Subject
+  </div>
+
+  <h4>Tense-wise Passive Voice Chart</h4>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Tense</th><th>Active</th><th>Passive Formula</th><th>Example (Passive)</th></tr></thead>
+    <tbody>
+      <tr><td>Simple Present</td><td>She writes a letter.</td><td>is/am/are + V3</td><td>A letter is written by her.</td></tr>
+      <tr><td>Present Continuous</td><td>She is writing a letter.</td><td>is/am/are + being + V3</td><td>A letter is being written by her.</td></tr>
+      <tr><td>Present Perfect</td><td>She has written a letter.</td><td>has/have + been + V3</td><td>A letter has been written by her.</td></tr>
+      <tr><td>Simple Past</td><td>She wrote a letter.</td><td>was/were + V3</td><td>A letter was written by her.</td></tr>
+      <tr><td>Past Continuous</td><td>She was writing a letter.</td><td>was/were + being + V3</td><td>A letter was being written by her.</td></tr>
+      <tr><td>Past Perfect</td><td>She had written a letter.</td><td>had + been + V3</td><td>A letter had been written by her.</td></tr>
+      <tr><td>Simple Future</td><td>She will write a letter.</td><td>will + be + V3</td><td>A letter will be written by her.</td></tr>
+      <tr><td>Modal (can/may/must)</td><td>She can write a letter.</td><td>modal + be + V3</td><td>A letter can be written by her.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="tip">When the agent (doer) is unknown, unimportant, or obvious — omit "by + subject". Example: "The thief was caught." (No need for "by the police")</div>
+</div>
+
+<hr class="divider">
+
+<!-- ===== UNIT III ===== -->
+<div id="unit3" class="section-header u3">
+  <div class="label">UNIT — III</div>
+  <h2><span>Public Speech & Conversation</span></h2>
+  <p style="color:var(--muted); font-size:14px; margin-top:8px;">Elements of Public Speaking · Persuasion · Conversation · Dialogue</p>
+</div>
+
+<div class="card accent-u3">
+  <h3>1. Elements of Effective Public Speaking</h3>
+  <div class="def-box c3"><strong>Public Speaking:</strong> The act of delivering a speech or presentation to a live audience with the purpose of informing, persuading, or entertaining.</div>
+
+  <h4>The 7 C's of Communication</h4>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>C</th><th>Meaning</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr><td>Clear</td><td>Easy to understand, no ambiguity</td><td>Use simple language; avoid jargon</td></tr>
+      <tr><td>Concise</td><td>Brief and to the point</td><td>Don't repeat unnecessarily; stay focused</td></tr>
+      <tr><td>Concrete</td><td>Specific, with facts and examples</td><td>"Sales increased by 30%" not "sales improved"</td></tr>
+      <tr><td>Correct</td><td>Accurate information, proper grammar</td><td>Double-check facts; use proper English</td></tr>
+      <tr><td>Coherent</td><td>Logical flow and connection</td><td>Ideas should follow a logical order</td></tr>
+      <tr><td>Complete</td><td>All necessary information included</td><td>Answer all relevant questions</td></tr>
+      <tr><td>Courteous</td><td>Polite and respectful tone</td><td>Avoid rude or dismissive language</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4>Key Elements in Detail</h4>
+
+  <h4 style="color:var(--unit3);">A. Content / Message</h4>
+  <ul class="list">
+    <li><strong>Introduction:</strong> Open with impact — a statistic, story, quote, or rhetorical question. State your purpose.</li>
+    <li><strong>Body:</strong> 3 main points, each supported with evidence, examples, and elaboration.</li>
+    <li><strong>Conclusion:</strong> Summarize key points, give a call to action or memorable closing line.</li>
+    <li><strong>Audience Analysis:</strong> Know who you are speaking to — age, education, interest level.</li>
+    <li><strong>Powerful Openings:</strong> "Did you know that...?" / "Imagine a world where..." / Quote by famous person</li>
+  </ul>
+
+  <h4 style="color:var(--unit3);">B. Voice Modulation</h4>
+  <div class="def-box c3"><strong>Voice Modulation:</strong> The variation of pitch, pace, volume, and tone while speaking to maintain audience interest and convey emotion.</div>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Element</th><th>Description</th><th>When to use</th></tr></thead>
+    <tbody>
+      <tr><td>Pitch</td><td>High or low frequency of voice</td><td>Rise for questions; lower for serious points</td></tr>
+      <tr><td>Pace</td><td>Speed of speaking</td><td>Slow down for important points; speed up for excitement</td></tr>
+      <tr><td>Volume</td><td>Loudness or softness</td><td>Loud for emphasis; soft for intimacy or suspense</td></tr>
+      <tr><td>Tone</td><td>Emotional quality of voice</td><td>Warm for connection; authoritative for credibility</td></tr>
+      <tr><td>Pause</td><td>Deliberate silence</td><td>Before key points; after powerful statements</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4 style="color:var(--unit3);">C. Body Language</h4>
+  <ul class="list">
+    <li><strong>Eye Contact:</strong> Look at different sections of the audience; creates trust and engagement</li>
+    <li><strong>Gestures:</strong> Use open hand gestures; avoid crossing arms (closed/defensive)</li>
+    <li><strong>Posture:</strong> Stand straight with feet shoulder-width apart; projects confidence</li>
+    <li><strong>Facial Expressions:</strong> Match your face to your words (smile when sharing good news)</li>
+    <li><strong>Movement:</strong> Move purposefully on stage; don't pace nervously or stand frozen</li>
+  </ul>
+
+  <h4 style="color:var(--unit3);">D. Overcoming Stage Fear (Glossophobia)</h4>
+  <ul class="list">
+    <li>Deep breathing before speaking (4-7-8 technique)</li>
+    <li>Thorough preparation and practice</li>
+    <li>Positive visualization — imagine success</li>
+    <li>Start with a smile; it reduces tension</li>
+    <li>Focus on message, not on yourself</li>
+    <li>Make eye contact with friendly faces in the audience</li>
+    <li>Pause deliberately; don't rush</li>
+    <li>Accept nervousness as normal — even great speakers feel it</li>
+    <li>Record yourself and review to improve</li>
+    <li>Join groups like debate club or public speaking practice sessions</li>
+  </ul>
+</div>
+
+<!-- PERSUASION -->
+<div class="card accent-u3">
+  <h3>2. Persuasion Techniques in Public Speaking</h3>
+  <div class="def-box c3"><strong>Persuasion:</strong> The process of convincing an audience to change their beliefs, attitudes, or actions through effective communication.</div>
+
+  <h4>Aristotle's Three Modes (Rhetorical Triangle)</h4>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Mode</th><th>Meaning</th><th>How to Use</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Ethos</strong></td><td>Credibility / Character</td><td>Establish your authority and expertise</td><td>"As a doctor with 20 years of experience, I can tell you..."</td></tr>
+      <tr><td><strong>Pathos</strong></td><td>Emotional Appeal</td><td>Connect with audience feelings</td><td>"Think about your children's future..."</td></tr>
+      <tr><td><strong>Logos</strong></td><td>Logical Appeal</td><td>Use facts, data, statistics, reasoning</td><td>"Studies show that 80% of accidents are caused by..."</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4>Other Persuasion Techniques</h4>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Technique</th><th>Explanation</th><th>Famous Example</th></tr></thead>
+    <tbody>
+      <tr><td>Repetition (Anaphora)</td><td>Repeating key phrases for impact</td><td>MLK: "I have a dream..." (repeated 8 times)</td></tr>
+      <tr><td>Rule of Three</td><td>Three points are easy to remember</td><td>Caesar: "Veni, Vidi, Vici" (I came, I saw, I conquered)</td></tr>
+      <tr><td>Rhetorical Questions</td><td>Questions that don't need an answer</td><td>"Is this the future we want for our children?"</td></tr>
+      <tr><td>Contrast</td><td>Juxtapose two opposite ideas</td><td>JFK: "Ask not what your country can do for you..."</td></tr>
+      <tr><td>Storytelling</td><td>Personal story to connect emotionally</td><td>"When I was struggling as a student..."</td></tr>
+      <tr><td>Social Proof</td><td>Others are doing it</td><td>"Millions of people worldwide have benefited from..."</td></tr>
+      <tr><td>Fear Appeal</td><td>Show danger, then offer solution</td><td>"If we don't act now, climate change will..."</td></tr>
+      <tr><td>Call to Action</td><td>Clear instruction for what to do next</td><td>"Join our movement today. Sign up at..."</td></tr>
+      <tr><td>Scarcity</td><td>Limited time/offer creates urgency</td><td>"This opportunity won't last forever..."</td></tr>
+      <tr><td>Bandwagon</td><td>Appeal to belonging/popularity</td><td>"Everyone is making the switch to renewable energy..."</td></tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<!-- CONVERSATION -->
+<div class="card accent-u3">
+  <h3>3. Conversation Skills</h3>
+
+  <h4>Starting a Formal Conversation (10 Openers)</h4>
+  <div class="ex"><span class="label-ex">FORMAL OPENERS</span>
+    1. "Good morning, may I introduce myself? I am..."<br>
+    2. "Excuse me, would you have a moment to discuss...?"<br>
+    3. "I believe we haven't had the pleasure of meeting. I am..."<br>
+    4. "Allow me to introduce myself. My name is..."<br>
+    5. "Good afternoon. I was hoping to speak with you about..."<br>
+    6. "It's a pleasure to meet you. I've heard a great deal about your work."<br>
+    7. "If you don't mind, I'd like to ask you about..."<br>
+    8. "Thank you for your time. I would like to discuss..."<br>
+    9. "Pardon me for interrupting, but I wanted to bring to your attention..."<br>
+    10. "I hope I'm not disturbing you. I was wondering if we could talk about..."
+  </div>
+
+  <h4>Polite Interruption and Turn-Taking</h4>
+  <ul class="list">
+    <li>"If I may add something here..."</li>
+    <li>"Pardon me, but I'd like to point out..."</li>
+    <li>"Could I just say something about that?"</li>
+    <li>"Going back to what was mentioned earlier..."</li>
+    <li>"To redirect our discussion to the main point..."</li>
+    <li>"I completely agree, and I would also add..."</li>
+  </ul>
+
+  <h4>Sample Dialogue — Formal (Job Interview Setting)</h4>
+  <div class="ex"><span class="label-ex">DIALOGUE — FORMAL</span>
+    <strong>Interviewer:</strong> Good morning! Please take a seat.<br>
+    <strong>Candidate:</strong> Good morning, sir. Thank you very much.<br>
+    <strong>Interviewer:</strong> Tell me a little about yourself.<br>
+    <strong>Candidate:</strong> Certainly. I am currently pursuing my BCA-AI degree. I have a strong interest in artificial intelligence and have completed several projects in web development.<br>
+    <strong>Interviewer:</strong> That's impressive. Where do you see yourself in five years?<br>
+    <strong>Candidate:</strong> I hope to be working as an AI engineer, contributing meaningfully to innovative technology solutions.<br>
+    <strong>Interviewer:</strong> Very good. Thank you for your time.<br>
+    <strong>Candidate:</strong> Thank you for this opportunity, sir.
+  </div>
+
+  <h4>Sample Dialogue — Informal</h4>
+  <div class="ex"><span class="label-ex">DIALOGUE — INFORMAL</span>
+    <strong>Ravi:</strong> Hey! Long time no see. How are you doing?<br>
+    <strong>Priya:</strong> I'm great, thanks! Been super busy with exams. And you?<br>
+    <strong>Ravi:</strong> Same here. Which paper do you have tomorrow?<br>
+    <strong>Priya:</strong> English Communication. I'm a bit nervous about it actually.<br>
+    <strong>Ravi:</strong> Don't worry! You're always well-prepared. You'll do great.<br>
+    <strong>Priya:</strong> Thanks, that really helps. Let's catch up after exams!<br>
+    <strong>Ravi:</strong> Absolutely! Good luck tomorrow!
+  </div>
+
+  <h4>Sample Speech — "Technology and Modern Life"</h4>
+  <div class="def-box c3" style="font-style:normal; font-size:14px; line-height:1.9;">
+    <strong>Good morning, respected teachers and dear friends.</strong> Today, I stand before you to speak on a topic that touches every aspect of our daily existence — <em>Technology and Modern Life.</em><br><br>
+    Technology has transformed the way we live, learn, and communicate. From the smartphone in our pocket to the satellite above our head, technology is everywhere. It has made the world smaller, bringing people closer across vast distances. Through the internet, we have access to the knowledge of the entire world at our fingertips.<br><br>
+    However, technology is a double-edged sword. While it has improved healthcare, education, and communication, it has also brought challenges such as addiction, privacy concerns, and the loss of human touch in relationships. We must learn to use technology as a tool — not as a master.<br><br>
+    As students of today, we are the creators of tomorrow. Let us use technology responsibly, ethically, and creatively to build a better future. <strong>Thank you.</strong>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ===== UNIT IV ===== -->
+<div id="unit4" class="section-header u4">
+  <div class="label">UNIT — IV</div>
+  <h2><span>Coherence & Vocabulary</span></h2>
+  <p style="color:var(--muted); font-size:14px; margin-top:8px;">Paragraph Coherence · Transition Words · Contextual Vocabulary · Comprehension</p>
+</div>
+
+<div class="card accent-u4">
+  <h3>1. Paragraph Coherence and Unity</h3>
+  <div class="def-box c4"><strong>Paragraph:</strong> A group of related sentences that together develop ONE main idea from beginning to end.</div>
+  <div class="def-box c4"><strong>Unity:</strong> Every sentence in the paragraph must relate to the topic sentence. No unrelated ideas should enter.</div>
+  <div class="def-box c4"><strong>Coherence:</strong> The logical, smooth flow of ideas. The reader should be able to follow the ideas easily from one sentence to the next without confusion.</div>
+
+  <h4>Difference: Unity vs Coherence</h4>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Unity</th><th>Coherence</th></tr></thead>
+    <tbody>
+      <tr><td>All sentences are about one topic</td><td>Sentences flow smoothly and logically</td></tr>
+      <tr><td>No irrelevant sentences</td><td>Ideas are connected with transition words</td></tr>
+      <tr><td>Topic sentence guides all others</td><td>Logical order is maintained</td></tr>
+      <tr><td>Example: Every sentence is about "benefits of exercise"</td><td>Example: Sentences move from general to specific, using "furthermore", "in addition"</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4>Elements of a Good Paragraph</h4>
+  <ul class="list">
+    <li><strong>Topic Sentence:</strong> The first sentence that states the main idea. It tells the reader what the paragraph is about.</li>
+    <li><strong>Supporting Details:</strong> Facts, examples, statistics, anecdotes, or quotations that develop the topic sentence.</li>
+    <li><strong>Logical Sequencing:</strong> Ideas arranged in a sensible order — chronological, order of importance, cause-effect, spatial.</li>
+    <li><strong>Concluding Sentence:</strong> The last sentence that wraps up the idea, summarizes, or transitions to the next paragraph.</li>
+  </ul>
+
+  <h4>5 Strong Topic Sentence Examples</h4>
+  <div class="ex"><span class="label-ex">TOPIC SENTENCES</span>
+    1. Exercise is one of the most important habits for maintaining good health.<br>
+    2. Technology has revolutionized the way students learn in the 21st century.<br>
+    3. Reading regularly offers numerous cognitive and emotional benefits.<br>
+    4. Social media has both positive and negative effects on modern relationships.<br>
+    5. Environmental pollution is one of the most serious challenges facing humanity today.
+  </div>
+</div>
+
+<!-- TRANSITION WORDS -->
+<div class="card accent-u4">
+  <h3>2. Transition Words and Phrases — Complete List</h3>
+  <div class="def-box c4"><strong>Transition Words:</strong> Words or phrases that connect ideas within and between sentences and paragraphs, ensuring smooth flow and logical connection.</div>
+
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Category</th><th>Transition Words / Phrases</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Addition</strong></td><td>furthermore, moreover, in addition, also, besides, additionally, not only...but also, likewise, similarly, equally important, as well as</td></tr>
+      <tr><td><strong>Contrast / Opposition</strong></td><td>however, on the other hand, nevertheless, nonetheless, although, even though, despite, in contrast, conversely, yet, still, while, whereas, on the contrary, but</td></tr>
+      <tr><td><strong>Cause and Effect</strong></td><td>therefore, thus, hence, consequently, as a result, because, since, due to, owing to, for this reason, so, accordingly, this leads to</td></tr>
+      <tr><td><strong>Time / Sequence</strong></td><td>first, second, third, then, next, after, before, finally, subsequently, previously, meanwhile, simultaneously, eventually, at last, in the meantime, later</td></tr>
+      <tr><td><strong>Example / Illustration</strong></td><td>for example, for instance, such as, to illustrate, namely, in particular, specifically, as an example, as demonstrated by</td></tr>
+      <tr><td><strong>Emphasis</strong></td><td>indeed, in fact, certainly, above all, most importantly, undoubtedly, without doubt, clearly, notably, especially</td></tr>
+      <tr><td><strong>Summary / Conclusion</strong></td><td>in conclusion, to summarize, in brief, on the whole, overall, to conclude, in short, finally, all in all, to sum up, in a nutshell</td></tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<!-- CONTEXTUAL VOCABULARY -->
+<div class="card accent-u4">
+  <h3>3. Contextual Vocabulary</h3>
+  <div class="def-box c4"><strong>Contextual Vocabulary:</strong> Words whose exact meaning can be understood only by looking at the surrounding words and sentences (the context) in which they appear.</div>
+
+  <h4>Denotation vs Connotation</h4>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Term</th><th>Meaning</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr><td>Denotation</td><td>The dictionary / literal meaning of a word</td><td>"Home" = a building where people live</td></tr>
+      <tr><td>Connotation</td><td>The emotional / cultural meaning associated with a word</td><td>"Home" = comfort, safety, family, love</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4>How to Guess Meaning from Context</h4>
+  <ul class="list">
+    <li><strong>Definition Clues:</strong> The word is explained in the sentence. Example: "The arid, or extremely dry, climate made farming difficult."</li>
+    <li><strong>Example Clues:</strong> Examples are given near the word. Example: "Coniferous trees such as pine, spruce, and fir..."</li>
+    <li><strong>Contrast Clues:</strong> Look for "but", "however", "although" — the opposite meaning is nearby. Example: "He was loquacious, but his brother was very quiet."</li>
+    <li><strong>Inference / General Sense Clues:</strong> Use overall meaning of the passage to guess. Example: "The deluge destroyed crops and flooded homes." → deluge = heavy flood</li>
+  </ul>
+
+  <h4>Practice: Guess Meaning from Context</h4>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Word in Context</th><th>Meaning</th></tr></thead>
+    <tbody>
+      <tr><td>"The benevolent king helped the poor." → benevolent</td><td>kind, generous</td></tr>
+      <tr><td>"She was very <em>loquacious</em>; she talked for hours." → loquacious</td><td>talkative</td></tr>
+      <tr><td>"The <em>arid</em> desert received no rain for months." → arid</td><td>dry, barren</td></tr>
+      <tr><td>"Despite his <em>frugal</em> lifestyle, he managed to save money." → frugal</td><td>careful with money, thrifty</td></tr>
+      <tr><td>"The <em>novice</em> swimmer needed a lot of coaching." → novice</td><td>beginner</td></tr>
+      <tr><td>"Her <em>candid</em> speech impressed everyone." → candid</td><td>honest, straightforward</td></tr>
+      <tr><td>"The scientist made an <em>empirical</em> observation." → empirical</td><td>based on evidence/experiment</td></tr>
+      <tr><td>"His <em>verbose</em> essay bored the readers." → verbose</td><td>using too many words, wordy</td></tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<!-- SAMPLE PARAGRAPHS -->
+<div class="card accent-u4">
+  <h3>4. Sample Paragraphs (Exam Ready)</h3>
+
+  <h4>Paragraph 1: Impact of Technology on Education</h4>
+  <div class="def-box c4" style="font-style:normal; font-size:14px; line-height:1.9;">
+    <em>[Topic Sentence]</em> Technology has fundamentally transformed the landscape of modern education. <em>[Supporting Detail 1]</em> For instance, online learning platforms such as YouTube and Coursera allow students to access high-quality education from anywhere in the world. <em>[Supporting Detail 2]</em> Furthermore, digital tools like smart boards, educational apps, and virtual laboratories have made complex subjects easier to understand. <em>[Supporting Detail 3]</em> In addition, technology has enabled personalized learning, allowing students to learn at their own pace. <em>[Contrast]</em> However, excessive screen time and internet distractions pose serious challenges to focused learning. <em>[Conclusion]</em> Therefore, while technology offers immense educational opportunities, it must be used responsibly and with clear purpose.
+  </div>
+
+  <h4>Paragraph 2: Importance of English in the Modern World</h4>
+  <div class="def-box c4" style="font-style:normal; font-size:14px; line-height:1.9;">
+    <em>[Topic Sentence]</em> English has established itself as the most important global language of communication in the modern world. <em>[Supporting Detail 1]</em> Indeed, it is the official language of international business, diplomacy, and scientific research. <em>[Supporting Detail 2]</em> Moreover, the vast majority of internet content is in English, making it essential for anyone who wishes to access global information. <em>[Supporting Detail 3]</em> In addition, proficiency in English significantly improves employment opportunities, particularly in multinational companies. <em>[Conclusion]</em> In short, mastering the English language opens doors to global opportunities and is a skill no modern professional can afford to ignore.
+  </div>
+
+  <h4>Paragraph 3: Benefits of Reading</h4>
+  <div class="def-box c4" style="font-style:normal; font-size:14px; line-height:1.9;">
+    <em>[Topic Sentence]</em> Reading regularly is one of the most beneficial habits a person can develop for both mental and personal growth. <em>[Supporting Detail 1]</em> First and foremost, reading expands vocabulary and strengthens language skills, enabling better communication. <em>[Supporting Detail 2]</em> Furthermore, it stimulates the imagination and enhances critical thinking abilities. <em>[Supporting Detail 3]</em> Research has shown that reading also reduces stress and improves focus and concentration. <em>[Supporting Detail 4]</em> In addition, books provide knowledge about history, science, culture, and philosophy, broadening one's worldview. <em>[Conclusion]</em> All in all, cultivating the habit of reading is an investment in oneself that pays lifelong dividends.
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ===== QUICK REVISION ===== -->
+<div id="revision" class="section-header sec">
+  <div class="label">SECTION — B</div>
+  <h2><span>Quick Revision Sheet</span> — One Page Per Unit</h2>
+</div>
+
+<div class="revision-grid">
+  <div class="rev-card">
+    <h5 style="color:var(--unit1)">📚 UNIT I — VOCABULARY</h5>
+    <ul class="list" style="font-size:13px;">
+      <li><strong>Root:</strong> Core meaning unit (dict=say, port=carry, aud=hear, bio=life, graph=write)</li>
+      <li><strong>Prefix:</strong> Added to beginning (un-=not, pre-=before, re-=again, super-=above)</li>
+      <li><strong>Suffix:</strong> Added to end (-tion=action, -ness=state, -ful=full of, -able=capable)</li>
+      <li><strong>Derivation:</strong> happy → unhappy</li>
+      <li><strong>Compounding:</strong> sun+shine = sunshine</li>
+      <li><strong>Blending:</strong> breakfast+lunch = brunch</li>
+      <li><strong>Clipping:</strong> advertisement → ad</li>
+      <li><strong>Acronym:</strong> NATO, LASER, RADAR</li>
+    </ul>
+  </div>
+  <div class="rev-card">
+    <h5 style="color:var(--unit2)">📝 UNIT II — SENTENCES</h5>
+    <ul class="list" style="font-size:13px;">
+      <li><strong>Assertive:</strong> States fact (full stop)</li>
+      <li><strong>Interrogative:</strong> Asks question (?)</li>
+      <li><strong>Imperative:</strong> Command/request</li>
+      <li><strong>Exclamatory:</strong> Emotion (!)</li>
+      <li><strong>Optative:</strong> Wish (May...!)</li>
+      <li><strong>Simple:</strong> 1 clause</li>
+      <li><strong>Compound:</strong> FANBOYS joins clauses</li>
+      <li><strong>Complex:</strong> subordinate clause</li>
+      <li>too...to → so...that...cannot</li>
+      <li>Passive = Object + aux + V3 + by + Subject</li>
+    </ul>
+  </div>
+  <div class="rev-card">
+    <h5 style="color:var(--unit3)">🎤 UNIT III — PUBLIC SPEECH</h5>
+    <ul class="list" style="font-size:13px;">
+      <li><strong>7 C's:</strong> Clear, Concise, Concrete, Correct, Coherent, Complete, Courteous</li>
+      <li><strong>Structure:</strong> Intro → Body → Conclusion</li>
+      <li><strong>Voice:</strong> Pitch, Pace, Volume, Tone, Pause</li>
+      <li><strong>Ethos:</strong> Credibility</li>
+      <li><strong>Pathos:</strong> Emotion</li>
+      <li><strong>Logos:</strong> Logic/Facts</li>
+      <li>Anaphora: "I have a dream..."</li>
+      <li>Rule of Three, Rhetorical Q, Contrast</li>
+      <li>Stage fear: Breathe, Prepare, Smile</li>
+    </ul>
+  </div>
+  <div class="rev-card">
+    <h5 style="color:var(--unit4)">🔗 UNIT IV — COHERENCE</h5>
+    <ul class="list" style="font-size:13px;">
+      <li><strong>Unity:</strong> All sentences on one topic</li>
+      <li><strong>Coherence:</strong> Smooth logical flow</li>
+      <li><strong>Topic Sentence:</strong> Main idea (usually first)</li>
+      <li><strong>Supporting Details:</strong> Facts, examples, stats</li>
+      <li><strong>Transitions:</strong> furthermore, however, therefore, finally</li>
+      <li><strong>Contextual Vocab:</strong> Meaning from context</li>
+      <li>Denotation = literal meaning</li>
+      <li>Connotation = emotional meaning</li>
+      <li>Context clues: definition, contrast, example</li>
+    </ul>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ===== PYQ ANSWERS ===== -->
+<div id="answers" class="section-header sec">
+  <div class="label">SECTION — C</div>
+  <h2><span>Complete Answers</span> to Previous Year Questions</h2>
+</div>
+
+<!-- Q1 SHORT -->
+<div class="q-header">
+  <span class="q-num">Q1</span>
+  <span class="q-text">Short Answer Questions (1 mark each)</span>
+</div>
+<div class="answer-box">
+  <p style="font-size:13px; color:var(--muted); margin-bottom:20px;">Write 2–3 lines for each. These are 1-mark questions — be precise and direct.</p>
+
+  <h4 style="color:var(--accent);">(a) Meaning of prefix "pre-" in "preview"</h4>
+  <p style="font-size:14px;">The prefix <strong>"pre-"</strong> comes from Latin and means <strong>"before"</strong>. In the word "preview," it means to view or see something <em>before</em> it is officially released or shown. For example: prehistoric (before history), prepare (make ready before), prevent (stop before it happens).</p>
+
+  <h4 style="color:var(--accent); margin-top:18px;">(b) Root word of "unhappiness"</h4>
+  <p style="font-size:14px;">The root word of "unhappiness" is <strong>"happy"</strong> (or its modified form "happ"). The word is built as: <strong>un-</strong> (prefix, meaning "not") + <strong>happy</strong> (root, meaning "feeling joy") + <strong>-ness</strong> (suffix, meaning "state or quality of"). So "unhappiness" means the state of not being happy.</p>
+
+  <h4 style="color:var(--accent); margin-top:18px;">(c) Convert "He is too tired to work" into a complex sentence</h4>
+  <p style="font-size:14px;">Complex Sentence: <strong>"He is so tired that he cannot work."</strong><br>
+  Rule: "too + adjective + to + verb" is converted to "so + adjective + that + subject + cannot/could not + verb." The "too...to" structure is a simple sentence; after transformation, it becomes complex because it now contains a subordinate clause ("that he cannot work").</p>
+
+  <h4 style="color:var(--accent); margin-top:18px;">(d) Type of sentence: "Where are you going?"</h4>
+  <p style="font-size:14px;">The sentence "Where are you going?" is an <strong>Interrogative Sentence</strong> — specifically a <strong>Wh-question</strong> (it begins with the Wh-word "Where"). Interrogative sentences ask questions and always end with a question mark (?). It can also be classified as a <strong>Complex sentence</strong> based on structure (though in common usage it is treated as a simple interrogative).</p>
+
+  <h4 style="color:var(--accent); margin-top:18px;">(e) One persuasive technique in public speaking</h4>
+  <p style="font-size:14px;"><strong>Anaphora (Repetition)</strong> is a powerful persuasive technique. It involves repeating a word or phrase at the beginning of successive sentences for emotional impact. The most famous example is Martin Luther King Jr.'s speech where he repeated <em>"I have a dream"</em> eight times, creating a powerful emotional effect on the audience and making the message unforgettable.</p>
+
+  <h4 style="color:var(--accent); margin-top:18px;">(f) One polite way to start a formal conversation</h4>
+  <p style="font-size:14px;">A polite way to start a formal conversation is: <strong>"Good morning/afternoon. May I introduce myself? I am [Name], and I am here to discuss..."</strong> This opener is respectful, professional, and clearly states the purpose. Another option: <em>"Excuse me, would you have a moment? I'd like to speak with you about an important matter."</em></p>
+
+  <h4 style="color:var(--accent); margin-top:18px;">(g) Meaning of contextual vocabulary</h4>
+  <p style="font-size:14px;"><strong>Contextual vocabulary</strong> refers to words whose meaning is best understood by looking at the words, sentences, or passage surrounding them — i.e., the context in which they appear. Instead of memorizing dictionary definitions, a reader uses clues from nearby text to determine meaning. For example, in the sentence "The arid, or extremely dry, climate made farming difficult," the word "arid" is explained directly in the sentence — this is a contextual clue.</p>
+</div>
+
+<!-- Q2 -->
+<div class="q-header">
+  <span class="q-num">Q2 — UNIT I</span>
+  <span class="q-text">Explain word formation in English: derivation, compounding, and blending.</span>
+</div>
+<div class="answer-box">
+  <h4 style="color:var(--unit1)">Introduction</h4>
+  <p style="font-size:14px; margin-bottom:12px;">Word formation refers to the processes by which new words are created in a language. English is a remarkably dynamic language that forms new words through multiple processes. The three most important processes are <strong>derivation, compounding, and blending</strong>.</p>
+
+  <h4 style="color:var(--unit1)">1. Derivation</h4>
+  <p style="font-size:14px; margin-bottom:10px;">Derivation is the process of forming new words by adding <strong>prefixes</strong> (to the beginning) or <strong>suffixes</strong> (to the end) of a root word. This is the most common word formation process in English.</p>
+  <ul class="list" style="font-size:14px;">
+    <li><strong>Adding Prefix:</strong> happy → <em>un</em>happy | view → <em>pre</em>view | natural → <em>super</em>natural</li>
+    <li><strong>Adding Suffix:</strong> teach → teach<em>er</em> | nation → nation<em>al</em> | beauty → beauti<em>ful</em></li>
+    <li><strong>Changing Word Class:</strong> act (verb) → action (noun) | beauty (noun) → beautiful (adjective)</li>
+  </ul>
+  <p style="font-size:14px; margin-top:8px;">More examples: educate → education, happy → happiness, create → creativity, dark → darkness, organize → disorganize</p>
+
+  <h4 style="color:var(--unit1); margin-top:16px;">2. Compounding</h4>
+  <p style="font-size:14px; margin-bottom:10px;">Compounding is the process of combining <strong>two or more independent words</strong> to create a new word with a new meaning. The combined word is called a <strong>compound word</strong>.</p>
+  <ul class="list" style="font-size:14px;">
+    <li>sun + shine = <em>sunshine</em></li>
+    <li>black + board = <em>blackboard</em></li>
+    <li>foot + ball = <em>football</em></li>
+    <li>rain + bow = <em>rainbow</em></li>
+    <li>tooth + brush = <em>toothbrush</em></li>
+    <li>fire + works = <em>fireworks</em></li>
+    <li>news + paper = <em>newspaper</em></li>
+    <li>book + store = <em>bookstore</em></li>
+  </ul>
+  <p style="font-size:14px; margin-top:8px;">Note: The meaning of a compound word may differ from the individual words. For example, "blackboard" does not necessarily have to be black.</p>
+
+  <h4 style="color:var(--unit1); margin-top:16px;">3. Blending</h4>
+  <p style="font-size:14px; margin-bottom:10px;">Blending (also called <strong>portmanteau</strong>) is the process of combining parts of two words — usually the beginning of one word and the end of another — to form a new word.</p>
+  <ul class="list" style="font-size:14px;">
+    <li>breakfast + lunch = <em>brunch</em></li>
+    <li>smoke + fog = <em>smog</em></li>
+    <li>web + seminar = <em>webinar</em></li>
+    <li>motor + hotel = <em>motel</em></li>
+    <li>information + entertainment = <em>infotainment</em></li>
+    <li>camera + recorder = <em>camcorder</em></li>
+    <li>education + entertainment = <em>edutainment</em></li>
+  </ul>
+  <p style="font-size:14px; margin-top:8px;">Blending is particularly common in modern technology and media vocabulary.</p>
+
+  <h4 style="color:var(--unit1); margin-top:16px;">Other Word Formation Processes (Bonus)</h4>
+  <ul class="list" style="font-size:14px;">
+    <li><strong>Clipping:</strong> advertisement → ad; examination → exam; laboratory → lab</li>
+    <li><strong>Conversion:</strong> "run" (verb) → "a run" (noun)</li>
+    <li><strong>Acronyms:</strong> NASA, LASER, RADAR</li>
+    <li><strong>Back-formation:</strong> editor → edit; television → televise</li>
+  </ul>
+
+  <h4 style="color:var(--unit1); margin-top:16px;">Conclusion</h4>
+  <p style="font-size:14px;">Word formation processes are essential tools for expanding English vocabulary. Understanding these processes not only helps in learning new words but also in decoding unfamiliar words encountered in reading. Derivation, compounding, and blending together account for the majority of new English words created every year.</p>
+</div>
+
+<!-- Q3 -->
+<div class="q-header">
+  <span class="q-num">Q3 — UNIT I</span>
+  <span class="q-text">How do Latin and Greek roots help learners understand unfamiliar words? Discuss with examples.</span>
+</div>
+<div class="answer-box">
+  <h4 style="color:var(--unit1)">Introduction</h4>
+  <p style="font-size:14px; margin-bottom:12px;">A large portion of the English vocabulary — estimated at over 60% — is derived from Latin and Greek roots. When learners understand these roots, they gain the ability to decode the meanings of thousands of unfamiliar words by recognizing the root within them. This is one of the most powerful vocabulary-learning strategies available.</p>
+
+  <h4 style="color:var(--unit1)">How Roots Help Decode Unknown Words</h4>
+  <p style="font-size:14px; margin-bottom:10px;">When we encounter an unfamiliar word, we can break it into its components: prefix + root + suffix. By knowing the root's meaning, we can often guess the word's meaning even without a dictionary.</p>
+  <p style="font-size:14px; margin-bottom:10px;"><strong>Example:</strong> The word "auditorium" may be unfamiliar, but if we know the Latin root <em>aud</em> means "hear," we understand it is a place where people come to hear (performances/speeches).</p>
+
+  <h4 style="color:var(--unit1)">Key Latin Roots with Examples</h4>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Root</th><th>Meaning</th><th>Words Derived</th></tr></thead>
+    <tbody>
+      <tr><td>dict</td><td>say / speak</td><td>dictate, predict, contradict, verdict, dictionary</td></tr>
+      <tr><td>port</td><td>carry</td><td>transport, import, export, portable, portfolio</td></tr>
+      <tr><td>aud</td><td>hear</td><td>audio, audience, audible, auditorium</td></tr>
+      <tr><td>vis / vid</td><td>see</td><td>vision, visible, video, evident, provide</td></tr>
+      <tr><td>scrib / script</td><td>write</td><td>describe, scripture, manuscript, prescribe</td></tr>
+      <tr><td>struct</td><td>build</td><td>structure, construct, instruct, destroy, obstruct</td></tr>
+      <tr><td>cred</td><td>believe</td><td>credible, incredible, credit, credentials</td></tr>
+      <tr><td>duc / duct</td><td>lead</td><td>educate, produce, conduct, reduce, introduce</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4 style="color:var(--unit1); margin-top:16px;">Key Greek Roots with Examples</h4>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Root</th><th>Meaning</th><th>Words Derived</th></tr></thead>
+    <tbody>
+      <tr><td>graph</td><td>write</td><td>photography, biography, paragraph, autograph</td></tr>
+      <tr><td>logy</td><td>study of</td><td>biology, psychology, technology, geology, zoology</td></tr>
+      <tr><td>phon</td><td>sound</td><td>telephone, microphone, symphony, phonetics</td></tr>
+      <tr><td>bio</td><td>life</td><td>biography, biology, antibiotic, biodiversity</td></tr>
+      <tr><td>chron</td><td>time</td><td>chronology, chronic, synchronize, anachronism</td></tr>
+      <tr><td>psych</td><td>mind</td><td>psychology, psychiatry, psychologist, psyche</td></tr>
+      <tr><td>micro</td><td>small</td><td>microscope, microphone, microwave, microchip</td></tr>
+      <tr><td>meter</td><td>measure</td><td>thermometer, kilometer, barometer, speedometer</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4 style="color:var(--unit1); margin-top:16px;">Practical Application — Decoding Unknown Words</h4>
+  <ul class="list" style="font-size:14px;">
+    <li><em>Misanthropy:</em> mis(o) = hate + anthrop = human → hatred of humans</li>
+    <li><em>Telecommunications:</em> tele = far + communic = share → communicating over distance</li>
+    <li><em>Chronological:</em> chron = time + -logical = relating to → arranged in order of time</li>
+    <li><em>Auditorium:</em> aud = hear + -torium = place → place for listening/hearing</li>
+  </ul>
+
+  <h4 style="color:var(--unit1); margin-top:16px;">Conclusion</h4>
+  <p style="font-size:14px;">Latin and Greek roots are the building blocks of English vocabulary. A learner who masters even 50-100 key roots gains the ability to understand thousands of words. Rather than memorizing words in isolation, understanding roots creates a deep, lasting vocabulary that grows naturally with reading and exposure.</p>
+</div>
+
+<!-- Q4 -->
+<div class="q-header">
+  <span class="q-num">Q4 — UNIT II</span>
+  <span class="q-text">Describe the various types of sentences based on structure (simple, compound, complex).</span>
+</div>
+<div class="answer-box">
+  <h4 style="color:var(--unit2)">Introduction</h4>
+  <p style="font-size:14px; margin-bottom:12px;">Sentences in English can be classified based on their <strong>structure</strong> — that is, by the number and type of clauses they contain. The three main structural types are: <strong>Simple, Compound, and Complex</strong> sentences. Understanding these types is essential for effective writing and communication.</p>
+
+  <h4 style="color:var(--unit2)">1. Simple Sentence</h4>
+  <p style="font-size:14px; margin-bottom:8px;">A simple sentence contains <strong>one independent clause</strong> with one subject and one predicate. It expresses one complete thought.</p>
+  <p style="font-size:14px; margin-bottom:8px;"><strong>Structure:</strong> [Subject] + [Verb] + [Object/Complement]</p>
+  <ul class="list" style="font-size:14px;">
+    <li>She sings beautifully.</li>
+    <li>The dog barked loudly.</li>
+    <li>I love playing cricket.</li>
+    <li>The teacher explained the lesson.</li>
+    <li>Birds fly in the sky.</li>
+    <li>He did not come to school. (Negative simple sentence)</li>
+    <li>My mother cooks delicious food.</li>
+    <li>The students completed their assignment.</li>
+  </ul>
+  <p style="font-size:14px; margin-top:8px;"><em>Note: A simple sentence may have a compound subject or compound predicate, but it still has only ONE main clause.</em></p>
+
+  <h4 style="color:var(--unit2); margin-top:16px;">2. Compound Sentence</h4>
+  <p style="font-size:14px; margin-bottom:8px;">A compound sentence contains <strong>two or more independent clauses</strong> joined by <strong>coordinating conjunctions</strong> (FANBOYS: For, And, Nor, But, Or, Yet, So) or semicolons. Each clause can stand alone as a sentence.</p>
+  <ul class="list" style="font-size:14px;">
+    <li>I studied hard, <em>but</em> I could not pass the exam.</li>
+    <li>She was tired, <em>so</em> she went to bed early.</li>
+    <li>He can sing, <em>and</em> he can also dance.</li>
+    <li>You must work hard, <em>or</em> you will fail.</li>
+    <li>It was raining, <em>yet</em> they went out to play.</li>
+    <li>She didn't eat anything, <em>nor</em> did she drink water.</li>
+    <li>I wanted to come, <em>but</em> I had no time.</li>
+    <li>The alarm rang, <em>and</em> she woke up immediately.</li>
+  </ul>
+
+  <h4 style="color:var(--unit2); margin-top:16px;">3. Complex Sentence</h4>
+  <p style="font-size:14px; margin-bottom:8px;">A complex sentence contains <strong>one independent clause</strong> and <strong>one or more dependent (subordinate) clauses</strong> joined by subordinating conjunctions such as: because, although, when, if, since, unless, until, while, after, before, as, though, wherever, whenever.</p>
+  <ul class="list" style="font-size:14px;">
+    <li><em>Because</em> he studied hard, he passed the exam.</li>
+    <li><em>Although</em> she was tired, she continued working.</li>
+    <li>He is so tired <em>that</em> he cannot work.</li>
+    <li><em>If</em> you work hard, you will succeed.</li>
+    <li><em>When</em> the bell rang, the students left the classroom.</li>
+    <li>I will wait <em>until</em> you return.</li>
+    <li>She left <em>before</em> I arrived.</li>
+    <li><em>Unless</em> you hurry, you will miss the train.</li>
+  </ul>
+
+  <h4 style="color:var(--unit2); margin-top:16px;">Comparison Table</h4>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Feature</th><th>Simple</th><th>Compound</th><th>Complex</th></tr></thead>
+    <tbody>
+      <tr><td>Clauses</td><td>1 independent</td><td>2+ independent</td><td>1 independent + 1+ dependent</td></tr>
+      <tr><td>Conjunction used</td><td>None</td><td>FANBOYS (coordinating)</td><td>Subordinating (because, when, if)</td></tr>
+      <tr><td>Complexity</td><td>Basic</td><td>Moderate</td><td>More nuanced</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4 style="color:var(--unit2); margin-top:16px;">Conclusion</h4>
+  <p style="font-size:14px;">Mastering sentence structures enables writers to vary their style, express complex ideas clearly, and communicate with greater precision. Good writing uses a mix of simple, compound, and complex sentences to create rhythm and clarity.</p>
+</div>
+
+<!-- Q5 -->
+<div class="q-header">
+  <span class="q-num">Q5 — UNIT II</span>
+  <span class="q-text">Discuss sentence transformation: affirmative to negative, assertive to interrogative, active to passive.</span>
+</div>
+<div class="answer-box">
+  <h4 style="color:var(--unit2)">Introduction</h4>
+  <p style="font-size:14px; margin-bottom:12px;">Sentence transformation is the process of changing a sentence from one form to another without changing its basic meaning. This skill is important for enhancing writing variety and demonstrating grammatical knowledge. Three major types of transformation are: <strong>Affirmative to Negative, Assertive to Interrogative, and Active to Passive Voice</strong>.</p>
+
+  <h4 style="color:var(--unit2)">1. Affirmative to Negative</h4>
+  <p style="font-size:14px; margin-bottom:8px;">An affirmative sentence states something as true. To make it negative, we add "not" after the auxiliary verb, or apply specific transformation rules.</p>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Rule</th><th>Affirmative</th><th>Negative</th></tr></thead>
+    <tbody>
+      <tr><td>Add "not" after aux.</td><td>She is happy.</td><td>She is not happy.</td></tr>
+      <tr><td>always → never</td><td>He always speaks the truth.</td><td>He never tells a lie.</td></tr>
+      <tr><td>too...to → so...that...not</td><td>He is too weak to walk.</td><td>He is so weak that he cannot walk.</td></tr>
+      <tr><td>everyone → no one</td><td>Everyone loves her.</td><td>No one hates her.</td></tr>
+      <tr><td>only → none but</td><td>Only a wise man can do this.</td><td>None but a wise man can do this.</td></tr>
+      <tr><td>both...and → neither...nor</td><td>Both Ram and Shyam passed.</td><td>Neither Ram nor Shyam failed.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4 style="color:var(--unit2); margin-top:16px;">2. Assertive to Interrogative</h4>
+  <p style="font-size:14px; margin-bottom:8px;">Rules: Positive assertive → Negative interrogative; Negative assertive → Positive interrogative</p>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Assertive</th><th>Interrogative</th></tr></thead>
+    <tbody>
+      <tr><td>The earth is round.</td><td>Is the earth not round?</td></tr>
+      <tr><td>She cannot swim.</td><td>Can she swim?</td></tr>
+      <tr><td>Everyone knows this fact.</td><td>Who does not know this fact?</td></tr>
+      <tr><td>It is very hot today.</td><td>Isn't it very hot today?</td></tr>
+      <tr><td>No one can deny this truth.</td><td>Who can deny this truth?</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4 style="color:var(--unit2); margin-top:16px;">3. Active to Passive Voice</h4>
+  <p style="font-size:14px; margin-bottom:8px;"><strong>Formula:</strong> Object + Helping Verb + V3 + by + Subject</p>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Tense</th><th>Active</th><th>Passive</th></tr></thead>
+    <tbody>
+      <tr><td>Simple Present</td><td>She writes a letter.</td><td>A letter is written by her.</td></tr>
+      <tr><td>Simple Past</td><td>He ate the apple.</td><td>The apple was eaten by him.</td></tr>
+      <tr><td>Simple Future</td><td>They will finish the work.</td><td>The work will be finished by them.</td></tr>
+      <tr><td>Present Perfect</td><td>She has submitted the form.</td><td>The form has been submitted by her.</td></tr>
+      <tr><td>Present Continuous</td><td>He is reading the book.</td><td>The book is being read by him.</td></tr>
+      <tr><td>Past Perfect</td><td>They had completed the project.</td><td>The project had been completed by them.</td></tr>
+      <tr><td>Modal (can)</td><td>She can solve the problem.</td><td>The problem can be solved by her.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4 style="color:var(--unit2); margin-top:16px;">Conclusion</h4>
+  <p style="font-size:14px;">Sentence transformation is a practical skill that enhances linguistic flexibility. By learning these transformation rules, students can express the same idea in multiple ways, which is valuable for both examination purposes and real-world communication.</p>
+</div>
+
+<!-- Q6 -->
+<div class="q-header">
+  <span class="q-num">Q6 — UNIT III</span>
+  <span class="q-text">Discuss the key elements of an effective public speech — voice modulation, body language, and content structure.</span>
+</div>
+<div class="answer-box">
+  <h4 style="color:var(--unit3)">Introduction</h4>
+  <p style="font-size:14px; margin-bottom:12px;">Public speaking is the art of communicating with a live audience to inform, persuade, or entertain. An effective public speech depends not only on <em>what</em> is said, but also on <em>how</em> it is said and <em>how the speaker presents themselves</em>. The three pillars of effective public speaking are <strong>Content Structure, Voice Modulation, and Body Language</strong>.</p>
+
+  <h4 style="color:var(--unit3)">1. Content Structure</h4>
+  <p style="font-size:14px; margin-bottom:8px;">A well-structured speech has three parts:</p>
+  <ul class="list" style="font-size:14px;">
+    <li><strong>Introduction:</strong> Opens powerfully to grab attention — use a statistic ("Did you know that...?"), a story, a quote, or a rhetorical question. Clearly state the topic and purpose.</li>
+    <li><strong>Body:</strong> Develop 2-3 main points. Each point should be supported with evidence, examples, and explanation. Use transitions to connect ideas smoothly.</li>
+    <li><strong>Conclusion:</strong> Summarize key points, reinforce the main message, and end with a memorable statement or call to action. Leave the audience with something to think about.</li>
+  </ul>
+  <p style="font-size:14px; margin-top:8px;"><strong>Audience Analysis</strong> is also critical — knowing the age, background, and interests of your audience helps you tailor content appropriately.</p>
+
+  <h4 style="color:var(--unit3); margin-top:16px;">2. Voice Modulation</h4>
+  <div class="def-box c3" style="font-style:normal; font-size:14px;">Voice modulation is the deliberate variation of pitch, pace, volume, and tone to make a speech dynamic and engaging.</div>
+  <ul class="list" style="font-size:14px; margin-top:8px;">
+    <li><strong>Pitch:</strong> Raise pitch for questions and exciting moments; lower it for serious, weighty statements.</li>
+    <li><strong>Pace:</strong> Slow down when making important points so the audience can absorb them. Speed up to build excitement.</li>
+    <li><strong>Volume:</strong> Speak louder for emphasis; whisper or speak softly for dramatic effect or intimacy.</li>
+    <li><strong>Pauses:</strong> Strategic pauses after key points allow the audience to reflect. They also project confidence.</li>
+    <li><strong>Tone:</strong> Match tone to content — warm for stories, authoritative for facts, enthusiastic for calls to action.</li>
+  </ul>
+  <p style="font-size:14px; margin-top:8px;"><em>Example: MLK Jr. varied his pace and volume masterfully in "I Have a Dream," building emotion through repetition and rising volume.</em></p>
+
+  <h4 style="color:var(--unit3); margin-top:16px;">3. Body Language</h4>
+  <p style="font-size:14px; margin-bottom:8px;">Research suggests that 55% of communication is body language, 38% is tone of voice, and only 7% is words (Mehrabian's Rule). This makes body language crucial.</p>
+  <ul class="list" style="font-size:14px;">
+    <li><strong>Eye Contact:</strong> Look at different sections of the audience to build connection and trust. Avoid staring at notes constantly.</li>
+    <li><strong>Gestures:</strong> Use open-palmed gestures to appear honest and welcoming. Avoid crossed arms (defensive) or hands in pockets (nervous).</li>
+    <li><strong>Posture:</strong> Stand straight with feet shoulder-width apart — this projects confidence and authority.</li>
+    <li><strong>Facial Expressions:</strong> Your face should match your words. Smile when sharing good news; look serious when discussing serious topics.</li>
+    <li><strong>Movement:</strong> Move purposefully on stage to engage different parts of the audience. Avoid nervous pacing.</li>
+  </ul>
+
+  <h4 style="color:var(--unit3); margin-top:16px;">The 7 C's of Effective Communication</h4>
+  <p style="font-size:14px;">Every effective speech should be Clear, Concise, Concrete, Correct, Coherent, Complete, and Courteous — these ensure that the message reaches the audience without confusion or misunderstanding.</p>
+
+  <h4 style="color:var(--unit3); margin-top:16px;">Conclusion</h4>
+  <p style="font-size:14px;">An effective public speech is the product of thorough preparation, a well-organized message, confident body language, and skilled voice modulation. Together, these elements transform a speaker from merely informing an audience into genuinely connecting with them and inspiring action.</p>
+</div>
+
+<!-- Q7 -->
+<div class="q-header">
+  <span class="q-num">Q7 — UNIT III</span>
+  <span class="q-text">Explain major persuasion techniques in public speaking with examples from famous speeches.</span>
+</div>
+<div class="answer-box">
+  <h4 style="color:var(--unit3)">Introduction</h4>
+  <p style="font-size:14px; margin-bottom:12px;">Persuasion is the art of convincing an audience to change their beliefs, attitudes, or behaviors. Great public speakers throughout history — from Aristotle's time to modern leaders — have used specific, well-understood techniques to persuade their audiences. The study of persuasion dates back to Aristotle, who identified three core modes of persuasion.</p>
+
+  <h4 style="color:var(--unit3)">Aristotle's Rhetorical Triangle</h4>
+  <ul class="list" style="font-size:14px;">
+    <li><strong>Ethos (Credibility):</strong> The speaker establishes their authority and trustworthiness. Example: "As a scientist with 25 years of research experience, I can tell you with certainty that climate change is real." The audience trusts the speaker because of their credentials.</li>
+    <li><strong>Pathos (Emotional Appeal):</strong> The speaker connects with the audience's feelings — hope, fear, love, anger. Example: Nelson Mandela's speeches about apartheid's suffering connected deeply through pathos.</li>
+    <li><strong>Logos (Logical Appeal):</strong> Using facts, statistics, and logical reasoning. Example: "According to the World Health Organization, 7 million people die annually due to air pollution. We cannot ignore this data."</li>
+  </ul>
+
+  <h4 style="color:var(--unit3); margin-top:16px;">Key Persuasion Techniques with Famous Examples</h4>
+  <ul class="list" style="font-size:14px;">
+    <li><strong>Anaphora (Repetition):</strong> Repeating a key phrase for emotional emphasis. Martin Luther King Jr. repeated "I have a dream" eight times in his 1963 speech, creating a powerful rhythm that made the dream unforgettable.</li>
+    <li><strong>Rhetorical Questions:</strong> Questions posed for effect, not expecting an answer. JFK asked: "And so, my fellow Americans, ask not what your country can do for you — ask what you can do for your country." This challenged the audience to act.</li>
+    <li><strong>Rule of Three:</strong> Presenting ideas in groups of three, which are easy to remember. Julius Caesar: "Veni, Vidi, Vici" — "I came, I saw, I conquered."</li>
+    <li><strong>Storytelling:</strong> Personal narratives create emotional connection. Steve Jobs began his Stanford commencement speech with "I want to tell you three stories from my life" — making his address personal and human.</li>
+    <li><strong>Contrast / Antithesis:</strong> Placing opposite ideas side by side for impact. JFK: "Ask not what your country can do for you — ask what you can do for your country."</li>
+    <li><strong>Social Proof:</strong> Citing others who have benefited. "Millions of people worldwide have already made the switch to renewable energy."</li>
+    <li><strong>Fear Appeal:</strong> Presenting a problem and then offering the solution. "If we do not act on climate change now, future generations will inherit a planet in crisis. But there is still time — if we choose to act today."</li>
+    <li><strong>Call to Action:</strong> Ending with a clear instruction. "Join us. Sign up. Make your voice heard. The time for action is NOW."</li>
+  </ul>
+
+  <h4 style="color:var(--unit3); margin-top:16px;">Conclusion</h4>
+  <p style="font-size:14px;">Effective persuasion in public speaking combines emotional appeal, logical reasoning, and personal credibility. The greatest speakers — MLK, JFK, Mandela, Lincoln, Steve Jobs — were masters of these techniques. By studying and practicing them, any speaker can dramatically increase their ability to move and persuade an audience.</p>
+</div>
+
+<!-- Q8 -->
+<div class="q-header">
+  <span class="q-num">Q8 — UNIT IV</span>
+  <span class="q-text">What is paragraph coherence? Discuss the role of topic sentences, supporting details, and logical sequencing.</span>
+</div>
+<div class="answer-box">
+  <h4 style="color:var(--unit4)">Introduction</h4>
+  <p style="font-size:14px; margin-bottom:12px;">A paragraph is a group of related sentences that together develop one central idea. For a paragraph to be effective, it must possess two essential qualities: <strong>Unity</strong> (all sentences relate to one idea) and <strong>Coherence</strong> (ideas flow smoothly and logically). Among the tools that create coherence, the most important are: the topic sentence, supporting details, and logical sequencing.</p>
+
+  <h4 style="color:var(--unit4)">What is Coherence?</h4>
+  <p style="font-size:14px; margin-bottom:12px;"><strong>Coherence</strong> is the quality that makes a paragraph easy to read and understand because the ideas are connected in a logical, smooth, and organized manner. A coherent paragraph does not jump randomly between ideas; instead, each sentence leads naturally to the next, creating a clear progression of thought. <strong>Unity</strong> ensures all sentences are about the same topic; <strong>coherence</strong> ensures they flow together properly.</p>
+
+  <h4 style="color:var(--unit4)">1. Topic Sentence</h4>
+  <p style="font-size:14px; margin-bottom:8px;">The topic sentence is usually the <strong>first sentence</strong> of a paragraph. It introduces the main idea and serves as the controlling statement that all other sentences must support.</p>
+  <ul class="list" style="font-size:14px;">
+    <li>It tells the reader what the paragraph will be about.</li>
+    <li>It must be specific enough to guide the paragraph but broad enough to accommodate supporting details.</li>
+    <li>A strong topic sentence: "Technology has revolutionized the way students learn in the 21st century."</li>
+    <li>A weak topic sentence: "Technology is important." (Too vague — does not give direction)</li>
+  </ul>
+
+  <h4 style="color:var(--unit4); margin-top:16px;">2. Supporting Details</h4>
+  <p style="font-size:14px; margin-bottom:8px;">Supporting details develop and prove the topic sentence. They can take several forms:</p>
+  <ul class="list" style="font-size:14px;">
+    <li><strong>Facts:</strong> "The internet provides access to over 1.7 billion websites."</li>
+    <li><strong>Statistics:</strong> "According to UNESCO, 85% of students use digital devices for learning."</li>
+    <li><strong>Examples:</strong> "Online platforms like Coursera and Khan Academy have made quality education accessible to millions."</li>
+    <li><strong>Anecdotes:</strong> A brief personal story that illustrates the point.</li>
+    <li><strong>Quotations:</strong> A statement from an expert or authority that supports the idea.</li>
+    <li><strong>Definitions:</strong> Explaining a term that is central to the topic.</li>
+  </ul>
+
+  <h4 style="color:var(--unit4); margin-top:16px;">3. Logical Sequencing</h4>
+  <p style="font-size:14px; margin-bottom:8px;">Ideas within a paragraph must follow a sensible order. Common ordering patterns include:</p>
+  <ul class="list" style="font-size:14px;">
+    <li><strong>Chronological Order:</strong> Events described in time order (first, then, after, finally)</li>
+    <li><strong>Order of Importance:</strong> Most to least important, or least to most (building to a climax)</li>
+    <li><strong>Cause and Effect:</strong> Showing reasons and results (because, therefore, as a result)</li>
+    <li><strong>General to Specific:</strong> Starting with a broad statement, then narrowing to details</li>
+    <li><strong>Spatial Order:</strong> Describing from left to right, top to bottom, near to far</li>
+  </ul>
+
+  <h4 style="color:var(--unit4); margin-top:16px;">4. Concluding Sentence</h4>
+  <p style="font-size:14px;">Every paragraph should end with a <strong>concluding sentence</strong> that restates the main idea in different words, summarizes the key supporting points, or transitions smoothly to the next paragraph. Example: "In short, technology has not merely changed education — it has transformed it entirely."</p>
+
+  <h4 style="color:var(--unit4); margin-top:16px;">Example Paragraph with Labels</h4>
+  <div class="def-box c4" style="font-style:normal; font-size:14px; line-height:1.9;">
+    <em>[Topic Sentence]</em> Exercise is one of the most important habits for maintaining good health. <em>[Fact]</em> Regular physical activity strengthens the heart, improves lung capacity, and helps maintain a healthy body weight. <em>[Statistic]</em> According to the World Health Organization, adults should get at least 150 minutes of moderate exercise per week. <em>[Example]</em> Simple activities such as walking, cycling, or swimming can have significant long-term health benefits. <em>[Contrast]</em> However, a sedentary lifestyle increases the risk of serious conditions like heart disease and diabetes. <em>[Conclusion]</em> Therefore, incorporating regular exercise into daily life is not a luxury but a necessity for a healthy, productive life.
+  </div>
+
+  <h4 style="color:var(--unit4); margin-top:16px;">Conclusion</h4>
+  <p style="font-size:14px;">Paragraph coherence is the foundation of effective writing. A strong topic sentence provides direction, supporting details build the argument, logical sequencing creates flow, and a concluding sentence brings closure. Together, these elements create a paragraph that is clear, convincing, and satisfying to read.</p>
+</div>
+
+<!-- Q9 -->
+<div class="q-header">
+  <span class="q-num">Q9 — UNIT IV</span>
+  <span class="q-text">Explain how transition words contribute to unity and flow. Provide examples of different categories.</span>
+</div>
+<div class="answer-box">
+  <h4 style="color:var(--unit4)">Introduction</h4>
+  <p style="font-size:14px; margin-bottom:12px;">Transition words and phrases are the glue that holds a paragraph — or an entire essay — together. They signal the relationship between ideas, showing how one thought connects to the next. Without transitions, writing becomes choppy and disconnected; with them, it flows naturally and logically. Transition words are essential tools for achieving both <strong>unity</strong> (staying on topic) and <strong>coherence</strong> (logical flow) in writing.</p>
+
+  <h4 style="color:var(--unit4)">What Are Transition Words?</h4>
+  <p style="font-size:14px; margin-bottom:12px;"><strong>Transition words and phrases</strong> are words or groups of words that show the relationship between ideas, sentences, or paragraphs. They help readers follow the writer's train of thought smoothly from one point to the next.</p>
+
+  <h4 style="color:var(--unit4)">Categories of Transition Words with Examples</h4>
+
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Category</th><th>Purpose</th><th>Key Words</th><th>Example in Sentence</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Addition</strong></td><td>Add more information</td><td>furthermore, moreover, in addition, also, besides</td><td>"Exercise improves health. <em>Furthermore</em>, it boosts mood and reduces stress."</td></tr>
+      <tr><td><strong>Contrast</strong></td><td>Show opposite idea</td><td>however, on the other hand, although, nevertheless, whereas</td><td>"He studied hard. <em>However</em>, he could not pass the exam."</td></tr>
+      <tr><td><strong>Cause &amp; Effect</strong></td><td>Show reason and result</td><td>therefore, consequently, as a result, because, hence, thus</td><td>"She practiced daily. <em>As a result</em>, she won the competition."</td></tr>
+      <tr><td><strong>Time / Sequence</strong></td><td>Show order of events</td><td>first, then, next, finally, subsequently, meanwhile, after</td><td>"<em>First</em>, boil the water. <em>Then</em>, add the tea leaves. <em>Finally</em>, pour it into a cup."</td></tr>
+      <tr><td><strong>Example</strong></td><td>Illustrate a point</td><td>for example, for instance, such as, to illustrate, namely</td><td>"Many factors cause pollution. <em>For example</em>, vehicle emissions and industrial waste."</td></tr>
+      <tr><td><strong>Emphasis</strong></td><td>Stress a key point</td><td>indeed, in fact, above all, most importantly, certainly</td><td>"Regular reading is beneficial. <em>Indeed</em>, it is one of the best habits a student can develop."</td></tr>
+      <tr><td><strong>Conclusion</strong></td><td>Wrap up ideas</td><td>in conclusion, to summarize, finally, all in all, in short, overall</td><td>"<em>In conclusion</em>, technology has transformed our lives in both positive and negative ways."</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4 style="color:var(--unit4); margin-top:16px;">Sample Paragraph Using Multiple Transitions</h4>
+  <div class="def-box c4" style="font-style:normal; font-size:14px; line-height:1.9;">
+    Reading is an invaluable habit that enriches both the mind and the soul. <strong>First and foremost</strong>, reading improves vocabulary and language skills, enabling better communication. <strong>Furthermore</strong>, it broadens a person's knowledge of the world — from history and science to philosophy and culture. <strong>In addition to</strong> these intellectual benefits, research has shown that reading significantly reduces stress. <strong>However</strong>, in today's digital age, many people prefer scrolling social media to reading books. <strong>Despite</strong> this trend, the deep, focused engagement that books demand cannot be replaced by short-form digital content. <strong>Therefore</strong>, it is essential to cultivate and protect the habit of reading. <strong>In conclusion</strong>, reading remains one of the most powerful tools available for personal development and lifelong learning.
+  </div>
+
+  <h4 style="color:var(--unit4); margin-top:16px;">Why Transitions Matter</h4>
+  <ul class="list" style="font-size:14px;">
+    <li>They guide the reader from one idea to the next without confusion.</li>
+    <li>They show the logical relationship between ideas (addition, contrast, cause-effect).</li>
+    <li>They improve the overall quality and professionalism of writing.</li>
+    <li>They prevent a paragraph from feeling like a disconnected list of facts.</li>
+    <li>They help create both unity (single topic) and coherence (smooth flow).</li>
+  </ul>
+
+  <h4 style="color:var(--unit4); margin-top:16px;">Conclusion</h4>
+  <p style="font-size:14px;">Transition words and phrases are essential elements of effective writing. They act as bridges between ideas, ensuring that the reader can follow the writer's thoughts effortlessly. By mastering the different categories of transitions — addition, contrast, cause-effect, sequence, example, emphasis, and conclusion — a writer can dramatically improve the quality, clarity, and flow of their paragraphs and essays.</p>
+</div>
+
+<hr class="divider">
+
+<!-- ===== EXAM TIPS ===== -->
+<div id="tips" class="section-header sec">
+  <div class="label">SECTION — E</div>
+  <h2><span>Last-Minute Exam Tips</span></h2>
+</div>
+
+<div class="card">
+  <h3>⏱ Time Management Strategy (3 Hours)</h3>
+  <div class="tbl-wrap">
+  <table>
+    <thead><tr><th>Time</th><th>Activity</th></tr></thead>
+    <tbody>
+      <tr><td>0:00 – 0:10</td><td>Read the entire paper carefully. Plan which 5 questions to attempt (Q1 is compulsory).</td></tr>
+      <tr><td>0:10 – 0:40</td><td>Attempt Q1 (7 short parts × 3-4 min each)</td></tr>
+      <tr><td>0:40 – 1:10</td><td>Attempt your chosen Unit-I long question (Q2 or Q3)</td></tr>
+      <tr><td>1:10 – 1:40</td><td>Attempt your chosen Unit-II long question (Q4 or Q5)</td></tr>
+      <tr><td>1:40 – 2:10</td><td>Attempt your chosen Unit-III long question (Q6 or Q7)</td></tr>
+      <tr><td>2:10 – 2:40</td><td>Attempt your chosen Unit-IV long question (Q8 or Q9)</td></tr>
+      <tr><td>2:40 – 3:00</td><td>Review all answers. Add examples if any answer is short. Check grammar.</td></tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<div class="card">
+  <h3>📋 How to Structure a 7-Mark Long Answer</h3>
+  <ul class="list">
+    <li><strong>Introduction (2-3 lines):</strong> Define the topic; mention what you will cover.</li>
+    <li><strong>Body (main content):</strong> Use headings/subheadings. Include at least 5-6 examples. Use tables where possible.</li>
+    <li><strong>Conclusion (2-3 lines):</strong> Summarize key points; end with a meaningful statement.</li>
+    <li><strong>Length:</strong> Aim for 1.5 to 2 pages per long answer (approx. 300-400 words)</li>
+    <li><strong>Presentation:</strong> Write neatly. Leave a line between sections. Underline key terms.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3>🏆 10 Golden Rules for the Exam Hall</h3>
+  <ol class="list">
+    <li>Read the full paper before writing a single word. Choose wisely between OR options.</li>
+    <li>Attempt Q1 first — it covers all units and sets a positive tone.</li>
+    <li>For long answers, always write an Introduction and Conclusion — they are easy marks.</li>
+    <li>Use examples generously — examiners reward specific, relevant examples.</li>
+    <li>Write definitions clearly and in your own words — shows understanding, not memorization.</li>
+    <li>Use tables for comparisons (e.g., active vs. passive, simple vs. compound vs. complex).</li>
+    <li>Underline or highlight key terms (root, prefix, coherence, ethos, pathos, logos, etc.)</li>
+    <li>Don't leave any attempted question incomplete — a partial answer gets partial marks.</li>
+    <li>For transformation questions, always show the original + the transformed sentence.</li>
+    <li>Keep your handwriting legible — a neat paper creates a positive impression.</li>
+  </ol>
+</div>
+
+<div class="card">
+  <h3>🎯 Most Expected Questions This Year</h3>
+  <h4>Short Answers (Q1 type — most likely):</h4>
+  <ul class="list">
+    <li>Meaning of prefix "mis-" or "re-" in a given word</li>
+    <li>Root word of a given word</li>
+    <li>Convert a "too...to" sentence into complex</li>
+    <li>Type of a given sentence</li>
+    <li>One example of Ethos / Pathos / Logos</li>
+    <li>One polite way to end a formal conversation</li>
+    <li>Difference between denotation and connotation</li>
+  </ul>
+  <h4>Long Answers (most likely):</h4>
+  <ul class="list">
+    <li>Unit I: Word formation processes OR Latin/Greek roots</li>
+    <li>Unit II: Types of sentences by structure OR Sentence transformation</li>
+    <li>Unit III: Elements of public speech OR Persuasion techniques</li>
+    <li>Unit IV: Paragraph coherence OR Transition words</li>
+  </ul>
+  <div class="tip">Every long question from last year can repeat — be ready for ALL options (Q2 AND Q3, Q4 AND Q5, etc.)</div>
+</div>
+
+<div class="card">
+  <h3>⚠️ Common Mistakes to Avoid</h3>
+  <ul class="list">
+    <li>Confusing prefix and suffix — prefix = beginning, suffix = end. Remember this always.</li>
+    <li>In passive voice, forgetting to change the verb to V3 (past participle form)</li>
+    <li>Writing "by he/she/they" instead of "by him/her/them" in passive voice</li>
+    <li>Not using question mark (?) for interrogative sentences</li>
+    <li>Forgetting "not" when converting positive assertive to interrogative</li>
+    <li>Missing transitions in paragraph writing — use at least 4-5 per long answer</li>
+    <li>Writing very short answers for long questions — aim for at least 1.5 pages</li>
+    <li>Confusing "blending" with "compounding" — blending merges PARTS; compounding uses WHOLE words</li>
+  </ul>
+</div>
+
+</div><!-- end container -->
+
+<footer>
+  Paper: B23-AECE-411 &nbsp;|&nbsp; English Language and Communication Level-4 &nbsp;|&nbsp; Max Marks: 35 &nbsp;|&nbsp; All Units Covered<br>
+  <span style="color:var(--accent);">Best of luck, Ashish! 🎯 You've got this.</span>
+</footer>
+
+
+
+<script>
+  (function () {
+    const body = document.body;
+    const toggle = document.querySelector('.menu-toggle');
+    const closeButtons = document.querySelectorAll('[data-close-menu]');
+    const menuLinks = document.querySelectorAll('.side-menu a');
+
+    function openMenu() {
+      body.classList.add('menu-open');
+      toggle.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeMenu() {
+      body.classList.remove('menu-open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+
+    toggle.addEventListener('click', function () {
+      body.classList.contains('menu-open') ? closeMenu() : openMenu();
+    });
+
+    closeButtons.forEach(function (button) {
+      button.addEventListener('click', closeMenu);
+    });
+
+    menuLinks.forEach(function (link) {
+      link.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') closeMenu();
+    });
+  })();
+</script>
+
+</body>
+</html>
